@@ -274,27 +274,32 @@ var APP_DATA = {
         "fov": 1.5410497529145328
       },
       "linkHotspots": [
-        {
+        /*
+        { (Esto se va a eliminar)
           "yaw": -0.7385727681256498,
           "pitch": 0.05386655938713858,
           "rotation": 0,
           "target": "6-pasillo-bioterio"
         },
+        */
         {
           "yaw": 2.2923807511436323,
           "pitch": 0.031686282451936165,
           "rotation": 0,
           "target": "4-estacionamiento-interior"
         },
+        /*
         {
           "yaw": 0.18245284071836743,
           "pitch": 0.05011252770234975,
           "rotation": 4.71238898038469,
           "target": "12-bioterio-sala-falta-nombre"
         }
+        */
       ],
       "infoHotspots": []
     },
+    /* 
     {
       "id": "6-pasillo-bioterio",
       "name": "Pasillo-Bioterio",
@@ -369,6 +374,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    
     {
       "id": "7-bioterio-almacen",
       "name": "Bioterio-Almacen",
@@ -603,6 +609,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    */
     {
       "id": "13-lobby-piso-1",
       "name": "Lobby-Piso-1",
