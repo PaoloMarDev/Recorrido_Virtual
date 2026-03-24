@@ -17,6 +17,7 @@
 
 import { stopTouchAndScrollEventPropagation } from "./hotspots/funcionesGenerales.js";
 import { createInfoHotspotElement } from "./hotspots/hsp_info.js";
+import { createVideoHotspotElement } from "./hotspots/hsp_video.js";
 
 (function() {
   var Marzipano = window.Marzipano;
@@ -102,6 +103,13 @@ import { createInfoHotspotElement } from "./hotspots/hsp_info.js";
       var element = createInfoHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
+    
+    // Create video hotspots.
+    (data.videoHotspots || []).forEach(function(hotspot) {
+      var element = createVideoHotspotElement(hotspot);
+      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+    });
+
 
     return {
       data: data,

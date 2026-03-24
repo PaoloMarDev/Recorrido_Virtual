@@ -42,7 +42,16 @@ var APP_DATA = {
           "target": "2-letras-cicata"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [],
+      "videoHotspots": [
+        {
+          "yaw": -1.04339730574711709,
+          "pitch": 0.16778635584351953,
+          "title": "Pedro pica papas",
+          "text": "Pedro pica papas",
+          "video": ""
+        }
+      ]
     },
     {
       "id": "1-zona-exterior",
