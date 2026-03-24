@@ -1,5 +1,18 @@
 import { stopTouchAndScrollEventPropagation } from "./funcionesGenerales.js";
 
+/* Estrucura del hotspot en data.js
+
+"infoHotspots": [
+      {
+        "yaw": -0.04339730574711709, ubicación en eje x
+        "pitch": 0.16778635584351953, ubicación en eje y
+        "title": "Title",
+        "text": "Text"
+      },
+    ]
+
+*/
+
 // ----- Hotspot de Información ----- (INICIO) //
   function createInfoHotspotElement(hotspot) {
 
