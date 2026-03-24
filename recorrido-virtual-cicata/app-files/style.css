@@ -1,3 +1,14 @@
+:root {
+  --topbar-height: 50px;
+  --sidebar-width: 0px;
+  --bottom-height: 40px;
+  --ui-padding: 20px;
+}
+
+body:has(#sceneList.enabled) {
+  --sidebar-width: 220px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
