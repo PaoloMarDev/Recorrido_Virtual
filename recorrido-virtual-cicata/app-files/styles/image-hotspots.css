@@ -1,39 +1,37 @@
-/* VIDEO HOTSPOT */
+/* image HOTSPOT */
 
-.video-hotspot {
+.image-hotspot {
   position: relative;
   font-family: 'Inter', sans-serif;
 }
 
 /* BOTÓN (círculo rosa) */
-.video-hotspot .video-hotspot-header {
+.image-hotspot .image-hotspot-header {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   background: linear-gradient(135deg, #c2185b, #8e0038);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-hotspot-icon {
+.image-hotspot-icon {
   width: 50%;
   height: 50%;
   object-fit: contain;
   pointer-events: none; /* evita bugs al hacer click */
 }
 
-.video-hotspot .video-hotspot-header:hover {
+.image-hotspot .image-hotspot-header:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(194, 24, 91, 0.6);
 }
 
 /* CONTENEDOR PRINCIPAL */
-.video-hotspot .video-hotspot-content {
+.image-hotspot .image-hotspot-content {
   position: absolute;
   top: 0;
   left: 60px;
@@ -57,14 +55,14 @@
 }
 
 /* CUANDO SE ABRE */
-.video-hotspot.visible .video-hotspot-content {
+.image-hotspot.visible .image-hotspot-content {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
 }
 
 /* TITULO */
-.video-hotspot .video-hotspot-title {
+.image-hotspot .image-hotspot-title {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
@@ -72,7 +70,7 @@
 }
 
 /* TEXTO (SCROLL SI ES NECESARIO) */
-.video-hotspot .video-hotspot-text {
+.image-hotspot .image-hotspot-text {
   font-size: 14px;
   color: #cfcfd6;
   line-height: 1.5;
@@ -85,17 +83,17 @@
 }
 
 /* SCROLL BONITO */
-.video-hotspot .video-hotspot-text::-webkit-scrollbar {
+.image-hotspot .image-hotspot-text::-webkit-scrollbar {
   width: 6px;
 }
 
-.video-hotspot .video-hotspot-text::-webkit-scrollbar-thumb {
+.image-hotspot .image-hotspot-text::-webkit-scrollbar-thumb {
   background: #c2185b;
   border-radius: 10px;
 }
 
-/* VIDEO RESPONSIVE */
-.video-hotspot .video-container {
+/* IMAGE RESPONSIVE */
+.image-hotspot .image-container {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 10px;
@@ -103,15 +101,15 @@
   background: black;
 }
 
-.video-hotspot video,
-.video-hotspot iframe {
+.image-hotspot-content img,
+.image-hotspot-content iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* BOTÓN CERRAR */
-.video-hotspot .video-hotspot-close {
+.image-hotspot .image-hotspot-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -122,6 +120,6 @@
   transition: opacity 0.2s;
 }
 
-.video-hotspot .video-hotspot-close:hover {
+.image-hotspot .image-hotspot-close:hover {
   opacity: 1;
 }

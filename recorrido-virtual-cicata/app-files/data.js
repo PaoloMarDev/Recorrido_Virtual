@@ -49,7 +49,16 @@ var APP_DATA = {
           "pitch": 0.16778635584351953,
           "title": "Pedro pica papas",
           "text": "Pedro pica papas",
-          "video": ""
+          "video": "King of Meat bugs.mov"
+        },
+      ],
+      "imageHotspots": [
+        {
+          "yaw": -2.0,
+          "pitch": 0,
+          "title": "Pedro pica papas",
+          "text": "Pedro pica papas",
+          "image": "./img/mega.jpg"
         }
       ]
     },
