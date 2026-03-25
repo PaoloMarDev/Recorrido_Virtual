@@ -151,10 +151,10 @@ import { createVideoHotspotElement } from "./hotspots/hsp_video.js";
   // Set handler for scene list toggle.
   sceneListToggleElement.addEventListener('click', toggleSceneList);
 
-  // Start with the scene list open on desktop.
-  if (!document.body.classList.contains('mobile')) {
-    showSceneList();
-  }
+  // El menú original fue desactivado a favor del ChatBot UI
+  // if (!document.body.classList.contains('mobile')) {
+  //   showSceneList();
+  // }
 
   // Set handler for scene switch.
   scenes.forEach(function(scene) {

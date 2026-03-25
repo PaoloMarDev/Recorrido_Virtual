@@ -65,13 +65,13 @@ body.fullscreen-enabled.mobile #titleBar {
   right: 100px;
 }
 
-/* If there are multiple scenes the title bar must make space for the scene list toggle */
+/* Ya no necesitamos espacio para el botón de lista, el chatbot lo controla */
 body.multiple-scenes #titleBar {
-  left: 40px;
+  left: 0;
 }
 
 body.multiple-scenes.mobile #titleBar {
-  left: 50px;
+  left: 0;
 }
 
 #titleBar .sceneName {
@@ -201,14 +201,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 #sceneListToggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  display: none; /* Deshabilitado a favor del Chatbot */
 }
 
 .mobile #sceneListToggle {
