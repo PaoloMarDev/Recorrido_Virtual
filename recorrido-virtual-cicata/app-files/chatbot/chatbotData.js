@@ -37,5 +37,13 @@ window.chatbotData = {
             title: "Pregunta 4", 
             answer: "Ejemplo 4." 
         },
-    ]
+    ],
+    ubicacion: {
+        title: "Ubicación",
+        answer: "Blvrd de los Trabajadores,\\nVillas del Descanso, 62574 Jiutepec, Mor.\\n\\n(Puedes reemplazar este texto con Iframes o instrucciones)."
+    },
+    contactos: {
+        title: "Contactos",
+        answer: "📧 Email: contacto@cicatamorelos.ipn.mx\\n📞 Teléfono: (555) 123-4567\\n🌐 Sitio web: www.cicatamorelos.ipn.mx"
+    }
 };
