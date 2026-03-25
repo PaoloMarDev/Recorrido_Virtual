@@ -1,0 +1,135 @@
+/* Estilos exclusivos de la Barra Lateral (Sidebar) y el Menú de Opciones */
+
+/* Contenedor Principal con Transparencia */
+#chatbot-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px; /* Un poco más de aire */
+    height: 100vh; /* Altura completa hasta el suelo */
+    background: rgba(74, 0, 36, 0.85); /* Fondo guinda semi-transparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    z-index: 9998; 
+    box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-y: auto; /* Scroll natural si hay muchos datos */
+    font-family: inherit;
+}
+
+/* Ocultar el sidebar (fuera de pantalla a la izquierda) */
+.sidebar-hidden {
+    transform: translateX(-105%);
+}
+
+/* Encabezado del Menú Sólido */
+.sidebar-header {
+    background-color: #4a0024;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botón Regresar (<) en el título del Header */
+.sidebar-header .back-btn {
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.2s ease-out, color 0.2s; /* Para que el agrandado sea muy suave */
+}
+
+/* Efecto Hover dinámico sobre la flecha */
+.sidebar-header .back-btn:hover {
+    transform: scale(1.4) translateX(-2px); 
+    color: #ffffff; 
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6); /* Brillo ligero y decente, sin exagerar */
+}
+
+/* Contenedor de Opciones (El Menú Principal o el de FAQ) */
+.menu-options {
+    flex-grow: 1;
+    padding: 20px 20px; /* Textos alineados asimilando el left: 20px del ícono bot flotante */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* padding inferior fuerte para no tapar los últimos items con el botón de chatbot */
+    padding-bottom: 120px;
+}
+
+/* Botones (Items) del Menú con diseño magenta */
+.menu-item {
+    background-color: #b00058;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    font-family: inherit;
+    width: 100%;
+}
+
+.menu-item:hover {
+    background-color: #d10068;
+    transform: translateX(5px);
+}
+
+/* Contenedor especial para el icono "?" en los botones de FAQ */
+.faq-icon-circle {
+    background: white;
+    color: #b00058;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Ocultar Barra de scroll visualmente en el Menú, pero seguir permitiendo el desplazamiento háptico */
+#chatbot-sidebar {
+    scrollbar-width: none; /* Oculta en Firefox */
+    -ms-overflow-style: none; /* Oculta en IE y Edge */
+}
+
+#chatbot-sidebar::-webkit-scrollbar {
+    display: none; /* Oculta en Chrome, Safari y Opera */
+}
+
+/* Barra inferior (Footer Sticky) que descansa firme sobre el piso extendiendo la píldora del robot */
+.sidebar-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55px; /* Empata verticalmente exacto con el boton bot ya reducido */
+    background-color: #8c0046; /* Magenta ligeramente agrisado según la imagen */
+    z-index: 5;
+    flex-shrink: 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
