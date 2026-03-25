@@ -24,7 +24,7 @@ window.chatbotTemplate = {
                     <div class="sidebar-header" id="sidebar-header-title">Menú Principal</div>
                     
                     <div class="menu-options" id="main-menu">
-                        <button class="menu-item" onclick="alert('Lista de habitaciones - Próximamente')">
+                        <button class="menu-item" onclick="window.chatbotSidebar.openHabitacionesMenu()">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                             Lista de habitaciones
                         </button>
@@ -48,6 +48,9 @@ window.chatbotTemplate = {
 
                     <!-- Div dinámico para las preguntas frecuentes -->
                     <div class="menu-options" id="faq-menu" style="display: none;"></div>
+
+                    <!-- Div dinámico para las habitaciones de Marzipano -->
+                    <div class="menu-options" id="habitaciones-menu" style="display: none;"></div>
 
                     <!-- Barra inferior visual (Footer) para que el botón no se pierda al hacer scroll -->
                     <div class="sidebar-footer"></div>
