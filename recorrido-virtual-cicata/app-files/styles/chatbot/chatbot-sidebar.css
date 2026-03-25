@@ -50,14 +50,13 @@
     padding: 0 10px;
     color: #fff;
     display: inline-block;
-    transition: transform 0.2s ease-out, color 0.2s; /* Para que el agrandado sea muy suave */
+    opacity: 0.8; /* Base para feedback de opacidad */
+    transition: opacity 0.2s; /* Igual que el botón de cerrar */
 }
 
-/* Efecto Hover dinámico sobre la flecha */
+/* Efecto Hover igual al del botón de cerrar */
 .sidebar-header .back-btn:hover {
-    transform: scale(1.4) translateX(-2px); 
-    color: #ffffff; 
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6); /* Brillo ligero y decente, sin exagerar */
+    opacity: 1;
 }
 
 /* Contenedor de Opciones (El Menú Principal o el de FAQ) */
