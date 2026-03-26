@@ -164,8 +164,8 @@ var APP_DATA = {
         {
           "yaw": -2.2183552531072497,
           "pitch": -0.23716614446166417,
-          "title": "Title",
-          "text": "Text"
+          "title": "Prueba de hotspot",
+          "text": "Este es un texto de prueba para ver como funciona el hotspot de información"
         }
       ]
     },
