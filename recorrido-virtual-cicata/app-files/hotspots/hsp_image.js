@@ -2,74 +2,68 @@ import { stopTouchAndScrollEventPropagation } from "./funcionesGenerales.js";
 
 /* Estrucura del hotspot en data.js
 
-"videoHotspots": [
+"imageHotspots": [
         {
           "yaw": -2.2183552531072497,       ubicación en eje x 
           "pitch": -0.23716614446166417,    ubicación en eje y
           "title": "Title",
           "text": "Text"
-          "video": "(poner el video subido en alguna carpeta del proyecto jijijijijijij)"
+          "image": "(poner la imagen subido en alguna carpeta del proyecto jijijijijijij)"
         }
     ]
 */
 
-// -------- Video Hotspot START -------- //
-function createVideoHotspotElement(hotspot) {
+// -------- IMAGE Hotspot START -------- //
+function createImageHotspotElement(hotspot) {
 
   // WRAPPER
   var wrapper = document.createElement('div');
-  wrapper.classList.add('hotspot', 'video-hotspot');
+  wrapper.classList.add('hotspot', 'image-hotspot');
 
   // BOTÓN (círculo)
   var header = document.createElement('div');
-  header.classList.add('video-hotspot-header');
-  
+  header.classList.add('image-hotspot-header');
+
   // Create image element.
   var icon = document.createElement('img');
-  icon.src = 'img/videoIcon.png';
-  icon.classList.add('video-hotspot-icon');
+  icon.src = 'img/imageIcon.png';
+  icon.classList.add('image-hotspot-icon');
   header.appendChild(icon);
 
   // -------- CONTENIDO -------- //
   var content = document.createElement('div');
-  content.classList.add('video-hotspot-content');
+  content.classList.add('image-hotspot-content');
 
   // CLOSE
   var close = document.createElement('div');
-  close.classList.add('video-hotspot-close');
+  close.classList.add('image-hotspot-close');
   close.innerHTML = '✕';
 
   // TITLE
   var title = document.createElement('div');
-  title.classList.add('video-hotspot-title');
+  title.classList.add('image-hotspot-title');
   title.innerHTML = hotspot.title || '';
 
   // TEXT
   var text = document.createElement('div');
-  text.classList.add('video-hotspot-text');
+  text.classList.add('image-hotspot-text');
   text.innerHTML = hotspot.text || '';
 
-  // VIDEO CONTAINER
-  var videoContainer = document.createElement('div');
-  videoContainer.classList.add('video-container');
+  // image CONTAINER
+  var imageContainer = document.createElement('div');
+  imageContainer.classList.add('image-container');
 
-  var video = document.createElement('video');
-  video.controls = true;
-  video.preload = "metadata";
-  video.playsInline = true;
+  var image = document.createElement('img');
+  image.src = hotspot.image;
+  image.alt = "Imagen de CICATA";
 
-  var source = document.createElement('source');
-  source.src = hotspot.video;
-  source.type = "video/mp4";
-
-  video.appendChild(source);
-  videoContainer.appendChild(video);
+  imageContainer.appendChild(image);
 
   // ARMAR
   content.appendChild(close);
   content.appendChild(title);
   content.appendChild(text);
-  content.appendChild(videoContainer);
+  content.appendChild(imageContainer);
 
   wrapper.appendChild(header);
   wrapper.appendChild(content);
@@ -87,6 +81,6 @@ function createVideoHotspotElement(hotspot) {
 
   return wrapper;
 }
-// -------- Video Hotspot END -------- //
+// -------- IMAGE Hotspot END -------- //
 
-export { createVideoHotspotElement }
+export { createImageHotspotElement }
