@@ -1,8 +1,15 @@
-/* Controlador del PopUp Modal de Preguntas Frecuentes FAQ */
+import chatbotData from './chatbotData.js';
 
-window.chatbotPopUp = {
+const chatbotPopUp = {
     init: function() {
         this.modal = document.getElementById("faq-modal");
+        
+        // Asignar evento de cierre al botón X si existe (se eliminó el onclick en el HTMLTemplate)
+        const closeBtn = document.getElementById("modal-close-btn");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => this.closeFAQModal());
+        }
+
         this.bindEvents();
     },
 
@@ -18,9 +25,9 @@ window.chatbotPopUp = {
     },
 
     openFAQModal: function(index) {
-        if (!this.modal || !window.chatbotData) return;
+        if (!this.modal || !chatbotData) return;
         
-        const faq = window.chatbotData.faqData[index];
+        const faq = chatbotData.faqData[index];
         if (!faq) return;
 
         this.showContent(faq.title, faq.answer);
@@ -56,3 +63,5 @@ window.chatbotPopUp = {
         if (triggerContainer) triggerContainer.classList.remove("modal-active-blur");
     }
 };
+
+export default chatbotPopUp;

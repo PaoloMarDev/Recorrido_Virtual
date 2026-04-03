@@ -1,4 +1,4 @@
-window.chatbotData = {
+const chatbotData = {
     faqData: [
         { 
             title: "¿Qué diferencia hay entre otros CICATA?", 
@@ -42,3 +42,5 @@ window.chatbotData = {
         answer: "Correo general: contacto@cicatamorelos.ipn.mx\\n Teléfono general: (555) 123-4567"
     }
 };
+
+export default chatbotData;

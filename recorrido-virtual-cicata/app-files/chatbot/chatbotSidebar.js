@@ -1,6 +1,7 @@
-/* Controlador visual de la Barra Lateral (Sidebar) y el cambio de Layout del Menú */
+import chatbotData from './chatbotData.js';
+import chatbotPopUp from './chatbotPopUp.js';
 
-window.chatbotSidebar = {
+const chatbotSidebar = {
     isSidebarOpen: false,
 
     init: function() {
@@ -30,6 +31,22 @@ window.chatbotSidebar = {
                 if (this.helpBubble) this.helpBubble.style.display = 'block'; 
             }
         });
+
+        // Configurar botones del menú principal (se eliminaron los onclick en el HTMLTemplate)
+        const btnHabitaciones = document.getElementById("btn-habitaciones");
+        if (btnHabitaciones) btnHabitaciones.addEventListener("click", () => this.openHabitacionesMenu());
+
+        const btnFaq = document.getElementById("btn-faq");
+        if (btnFaq) btnFaq.addEventListener("click", () => this.openFAQMenu());
+
+        const btnPaginaOficial = document.getElementById("btn-pagina-oficial");
+        if (btnPaginaOficial) btnPaginaOficial.addEventListener("click", () => window.open('https://www.cicatamorelos.ipn.mx/', '_blank'));
+
+        const btnUbicacion = document.getElementById("btn-ubicacion");
+        if (btnUbicacion) btnUbicacion.addEventListener("click", () => chatbotPopUp.showContent(chatbotData.ubicacion.title, chatbotData.ubicacion.answer));
+
+        const btnContactos = document.getElementById("btn-contactos");
+        if (btnContactos) btnContactos.addEventListener("click", () => chatbotPopUp.showContent(chatbotData.contactos.title, chatbotData.contactos.answer));
     },
 
     showMainMenu: function() {
@@ -48,12 +65,18 @@ window.chatbotSidebar = {
         if (this.faqMenu) this.faqMenu.style.display = "flex";
         
         if (this.headerTitle) {
-            this.headerTitle.innerHTML = `<span class="back-btn" onclick="window.chatbotSidebar.showMainMenu()">&#10094;</span> Preguntas Frecuentes`;
+            this.headerTitle.innerHTML = "";
+            const backBtn = document.createElement("span");
+            backBtn.className = "back-btn";
+            backBtn.innerHTML = "&#10094;";
+            backBtn.onclick = () => this.showMainMenu();
+            this.headerTitle.appendChild(backBtn);
+            this.headerTitle.append(" Preguntas Frecuentes");
         }
 
         // Renderiza los botones a partir de la data almacenada
-        if (this.faqMenu && this.faqMenu.children.length === 0 && window.chatbotData) {
-            window.chatbotData.faqData.forEach((faq, index) => {
+        if (this.faqMenu && this.faqMenu.children.length === 0 && chatbotData) {
+            chatbotData.faqData.forEach((faq, index) => {
                 const btn = document.createElement("button");
                 btn.className = "faq-item menu-item";
                 btn.innerHTML = `
@@ -61,7 +84,7 @@ window.chatbotSidebar = {
                     ${faq.title}
                 `;
                 btn.onclick = () => {
-                    if (window.chatbotPopUp) window.chatbotPopUp.openFAQModal(index);
+                    if (chatbotPopUp) chatbotPopUp.openFAQModal(index);
                 };
                 this.faqMenu.appendChild(btn);
             });
@@ -74,7 +97,13 @@ window.chatbotSidebar = {
         if (this.habitacionesMenu) this.habitacionesMenu.style.display = "flex";
         
         if (this.headerTitle) {
-            this.headerTitle.innerHTML = `<span class="back-btn" onclick="window.chatbotSidebar.showMainMenu()">&#10094;</span> Habitaciones`;
+            this.headerTitle.innerHTML = "";
+            const backBtn = document.createElement("span");
+            backBtn.className = "back-btn";
+            backBtn.innerHTML = "&#10094;";
+            backBtn.onclick = () => this.showMainMenu();
+            this.headerTitle.appendChild(backBtn);
+            this.headerTitle.append(" Habitaciones");
         }
 
         // Renderiza botones autómaticos leyendo todas las escenas de Marzipano globales (APP_DATA) instaladas
@@ -100,3 +129,5 @@ window.chatbotSidebar = {
         }
     }
 };
+
+export default chatbotSidebar;

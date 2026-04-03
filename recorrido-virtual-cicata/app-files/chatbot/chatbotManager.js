@@ -1,14 +1,18 @@
-/* Maneja la inyección del HTML e inicializa los controladores del chatbot */
+import chatbotHTMLTemplate from './chatbotHTMLTemplate.js';
+import chatbotSidebar from './chatbotSidebar.js';
+import chatbotPopUp from './chatbotPopUp.js';
 
-window.chatbotManager = {
+const chatbotManager = {
     injectHTML: function() {
-        document.body.insertAdjacentHTML('beforeend', window.chatbotHTMLTemplate);
+        document.body.insertAdjacentHTML('beforeend', chatbotHTMLTemplate);
     }
 };
 
 // Inyectar una vez que termine de cargar la vista
 document.addEventListener("DOMContentLoaded", () => {
-    if(window.chatbotManager) window.chatbotManager.injectHTML();
-    if(window.chatbotSidebar) window.chatbotSidebar.init();
-    if(window.chatbotPopUp) window.chatbotPopUp.init();
+    chatbotManager.injectHTML();
+    chatbotSidebar.init();
+    chatbotPopUp.init();
 });
+
+export default chatbotManager;
