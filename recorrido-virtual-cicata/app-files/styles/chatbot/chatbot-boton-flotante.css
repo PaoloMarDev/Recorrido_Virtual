@@ -64,3 +64,14 @@
     transform: scale(1.05);
     background-color: #d10068;
 }
+
+/* Blur del botón robot cuando hay un popup activo (igual que el resto de la UI) */
+#chatbot-trigger-container {
+    transition: filter 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#chatbot-trigger-container.modal-active-blur {
+    filter: blur(2px);
+    opacity: 0.5;
+    pointer-events: none;
+}

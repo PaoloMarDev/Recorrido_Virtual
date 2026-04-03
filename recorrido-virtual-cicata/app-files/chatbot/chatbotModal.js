@@ -39,6 +39,10 @@ window.chatbotModal = {
         // Transiciona la opacidad y escala para hacer el pop-up suave
         this.modal.classList.remove("modal-hidden");
         this.modal.classList.add("modal-visible");
+
+        // Aplica el mismo blur al botón robot (fade-in)
+        const triggerContainer = document.getElementById("chatbot-trigger-container");
+        if (triggerContainer) triggerContainer.classList.add("modal-active-blur");
     },
 
     closeFAQModal: function() {
@@ -46,5 +50,9 @@ window.chatbotModal = {
         
         this.modal.classList.add("modal-hidden");
         this.modal.classList.remove("modal-visible");
+
+        // Quita el blur del botón robot (fade-out via CSS transition)
+        const triggerContainer = document.getElementById("chatbot-trigger-container");
+        if (triggerContainer) triggerContainer.classList.remove("modal-active-blur");
     }
 };
