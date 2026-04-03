@@ -86,13 +86,14 @@ window.chatbotSidebar = {
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2" style="flex-shrink:0;"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
                     ${scene.name}
                 `;
-                // Al hacer click, fingimos mágicamente tocar el botón oscuro oculto que controla Marzipano originalmente
                 btn.onclick = () => {
                     const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
-                    if(nativo) nativo.click();
-                    
-                    // Mejoramos la UX cerrando el bot de inmediato para dejar ver su cuarto recién aterrizado:
-                    document.getElementById("chatbot-toggle-btn").click();
+                    if (nativo) nativo.click();
+
+                    // Solo cerrar en móvil (igual que Marzipano original)
+                    if (document.body.classList.contains('mobile')) {
+                        document.getElementById("chatbot-toggle-btn").click();
+                    }
                 };
                 this.habitacionesMenu.appendChild(btn);
             });
