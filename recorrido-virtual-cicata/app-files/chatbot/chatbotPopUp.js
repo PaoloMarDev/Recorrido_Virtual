@@ -1,6 +1,6 @@
 /* Controlador del PopUp Modal de Preguntas Frecuentes FAQ */
 
-window.chatbotModal = {
+window.chatbotPopUp = {
     init: function() {
         this.modal = document.getElementById("faq-modal");
         this.bindEvents();

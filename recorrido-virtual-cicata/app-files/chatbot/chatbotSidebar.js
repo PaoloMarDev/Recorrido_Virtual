@@ -61,7 +61,7 @@ window.chatbotSidebar = {
                     ${faq.title}
                 `;
                 btn.onclick = () => {
-                    if (window.chatbotModal) window.chatbotModal.openFAQModal(index);
+                    if (window.chatbotPopUp) window.chatbotPopUp.openFAQModal(index);
                 };
                 this.faqMenu.appendChild(btn);
             });

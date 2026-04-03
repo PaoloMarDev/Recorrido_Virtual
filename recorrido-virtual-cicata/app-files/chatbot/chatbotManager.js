@@ -10,5 +10,5 @@ window.chatbotManager = {
 document.addEventListener("DOMContentLoaded", () => {
     if(window.chatbotManager) window.chatbotManager.injectHTML();
     if(window.chatbotSidebar) window.chatbotSidebar.init();
-    if(window.chatbotModal) window.chatbotModal.init();
+    if(window.chatbotPopUp) window.chatbotPopUp.init();
 });
