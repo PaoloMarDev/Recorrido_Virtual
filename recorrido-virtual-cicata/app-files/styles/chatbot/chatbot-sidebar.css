@@ -17,6 +17,11 @@
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow-y: auto; /* Scroll natural si hay muchos datos */
     font-family: inherit;
+    /* Permitir selección de texto (sobreescribe el reset global de Marzipano) */
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 /* Ocultar el sidebar (fuera de pantalla a la izquierda) */

@@ -44,6 +44,11 @@
     transform: scale(0.95) translateY(20px);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden; /* Para redondear orillas del header interno */
+    /* Permitir selección de texto dentro del modal (sobreescribe el reset global de Marzipano) */
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 /* El botón circular X de cerrar ventana */
@@ -93,6 +98,11 @@
     line-height: 1.6;
     margin: 0;
     font-weight: 300;
+    /* Selección de texto explícita para cada hijo también */
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 /* CSS del popup completado sin botones extra inferiores */
