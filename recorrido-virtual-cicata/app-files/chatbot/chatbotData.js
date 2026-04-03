@@ -1,8 +1,7 @@
-/* Base de datos de Preguntas Frecuentes. Editable para agregar o modificar texto. */
 window.chatbotData = {
     faqData: [
         { 
-            title: "Què diferencia hay entre otros CICATA?", 
+            title: "¿Qué diferencia hay entre otros CICATA?", 
             answer: "Ejemplo 1. Reemplaza este texto con la respuesta real a la pregunta." 
         },
         { 
@@ -16,10 +15,6 @@ window.chatbotData = {
         { 
             title: "Pregunta 4", 
             answer: "Ejemplo 4." 
-        },
-        { 
-            title: "Paolo dictador", 
-            answer: "" 
         },
         { 
             title: "Pregunta 4", 
