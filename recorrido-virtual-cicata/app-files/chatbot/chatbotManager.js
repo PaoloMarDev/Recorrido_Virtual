@@ -5,14 +5,16 @@ import chatbotPopUp from './chatbotPopUp.js';
 const chatbotManager = {
     injectHTML: function() {
         document.body.insertAdjacentHTML('beforeend', chatbotHTMLTemplate);
+    },
+    init: function() {
+        this.injectHTML();
+        chatbotSidebar.init();
+        chatbotPopUp.init();
     }
 };
 
-// Inyectar una vez que termine de cargar la vista
 document.addEventListener("DOMContentLoaded", () => {
-    chatbotManager.injectHTML();
-    chatbotSidebar.init();
-    chatbotPopUp.init();
+    chatbotManager.init();
 });
 
 export default chatbotManager;
