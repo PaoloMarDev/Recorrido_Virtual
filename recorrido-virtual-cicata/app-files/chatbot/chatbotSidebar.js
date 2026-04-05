@@ -32,7 +32,6 @@ const chatbotSidebar = {
             }
         });
 
-        // Configurar botones del menú principal (se eliminaron los onclick en el HTMLTemplate)
         const btnHabitaciones = document.getElementById("btn-habitaciones");
         if (btnHabitaciones) btnHabitaciones.addEventListener("click", () => this.openHabitacionesMenu());
 
@@ -48,49 +47,7 @@ const chatbotSidebar = {
         const btnContactos = document.getElementById("btn-contactos");
         if (btnContactos) btnContactos.addEventListener("click", () => chatbotPopUp.showContent(chatbotData.contactos.title, chatbotData.contactos.answer));
     },
-
-    showMainMenu: function() {
-        if (this.mainMenu) this.mainMenu.style.display = "flex";
-        if (this.faqMenu) this.faqMenu.style.display = "none";
-        if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
-        
-        if (this.headerTitle) {
-            this.headerTitle.innerHTML = "Menú Principal"; // Texto base
-        }
-    },
-
-    openFAQMenu: function() {
-        if (this.mainMenu) this.mainMenu.style.display = "none";
-        if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
-        if (this.faqMenu) this.faqMenu.style.display = "flex";
-        
-        if (this.headerTitle) {
-            this.headerTitle.innerHTML = "";
-            const backBtn = document.createElement("span");
-            backBtn.className = "back-btn";
-            backBtn.innerHTML = "&#10094;";
-            backBtn.onclick = () => this.showMainMenu();
-            this.headerTitle.appendChild(backBtn);
-            this.headerTitle.append(" Preguntas Frecuentes");
-        }
-
-        // Renderiza los botones a partir de la data almacenada
-        if (this.faqMenu && this.faqMenu.children.length === 0 && chatbotData) {
-            chatbotData.faqData.forEach((faq, index) => {
-                const btn = document.createElement("button");
-                btn.className = "faq-item menu-item";
-                btn.innerHTML = `
-                    <div class="faq-icon-circle">?</div>
-                    ${faq.title}
-                `;
-                btn.onclick = () => {
-                    if (chatbotPopUp) chatbotPopUp.openFAQModal(index);
-                };
-                this.faqMenu.appendChild(btn);
-            });
-        }
-    },
-
+    
     openHabitacionesMenu: function() {
         if (this.mainMenu) this.mainMenu.style.display = "none";
         if (this.faqMenu) this.faqMenu.style.display = "none";
@@ -127,7 +84,49 @@ const chatbotSidebar = {
                 this.habitacionesMenu.appendChild(btn);
             });
         }
-    }
+    },
+
+    openFAQMenu: function() {
+        if (this.mainMenu) this.mainMenu.style.display = "none";
+        if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
+        if (this.faqMenu) this.faqMenu.style.display = "flex";
+        
+        if (this.headerTitle) {
+            this.headerTitle.innerHTML = "";
+            const backBtn = document.createElement("span");
+            backBtn.className = "back-btn";
+            backBtn.innerHTML = "&#10094;";
+            backBtn.onclick = () => this.showMainMenu();
+            this.headerTitle.appendChild(backBtn);
+            this.headerTitle.append(" Preguntas Frecuentes");
+        }
+
+        // Renderiza los botones a partir de la data almacenada
+        if (this.faqMenu && this.faqMenu.children.length === 0 && chatbotData) {
+            chatbotData.faqData.forEach((faq, index) => {
+                const btn = document.createElement("button");
+                btn.className = "faq-item menu-item";
+                btn.innerHTML = `
+                    <div class="faq-icon-circle">?</div>
+                    ${faq.title}
+                `;
+                btn.onclick = () => {
+                    if (chatbotPopUp) chatbotPopUp.openFAQModal(index);
+                };
+                this.faqMenu.appendChild(btn);
+            });
+        }
+    },
+    
+    showMainMenu: function() {
+        if (this.mainMenu) this.mainMenu.style.display = "flex";
+        if (this.faqMenu) this.faqMenu.style.display = "none";
+        if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
+        
+        if (this.headerTitle) {
+            this.headerTitle.innerHTML = "Menú Principal"; // Texto base
+        }
+    },
 };
 
 export default chatbotSidebar;
