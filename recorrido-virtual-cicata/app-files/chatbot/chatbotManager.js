@@ -3,10 +3,10 @@ import chatbotSidebar from './chatbotSidebar.js';
 import chatbotPopUp from './chatbotPopUp.js';
 
 const chatbotManager = {
-    injectHTML: function() {
+    injectHTML() {
         document.body.insertAdjacentHTML('beforeend', chatbotHTMLTemplate);
     },
-    init: function() {
+    init() {
         this.injectHTML();
         chatbotSidebar.init();
         chatbotPopUp.init();

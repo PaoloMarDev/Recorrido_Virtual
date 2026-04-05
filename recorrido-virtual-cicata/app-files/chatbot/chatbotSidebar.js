@@ -4,7 +4,7 @@ import chatbotPopUp from './chatbotPopUp.js';
 const chatbotSidebar = {
     isSidebarOpen: false,
 
-    init: function() {
+    init() {
         this.sidebar = document.getElementById("chatbot-sidebar");
         this.toggleBtn = document.getElementById("chatbot-toggle-btn");
         this.mainMenu = document.getElementById("main-menu");
@@ -16,7 +16,7 @@ const chatbotSidebar = {
         this.bindEvents();
     },
 
-    bindEvents: function() {
+    bindEvents() {
         if (!this.toggleBtn) return;
         
         this.toggleBtn.addEventListener("click", () => {
@@ -48,7 +48,7 @@ const chatbotSidebar = {
         if (btnContactos) btnContactos.addEventListener("click", () => chatbotPopUp.showContent(chatbotData.contactos.title, chatbotData.contactos.answer));
     },
     
-    openHabitacionesMenu: function() {
+    openHabitacionesMenu() {
         if (this.mainMenu) this.mainMenu.style.display = "none";
         if (this.faqMenu) this.faqMenu.style.display = "none";
         if (this.habitacionesMenu) this.habitacionesMenu.style.display = "flex";
@@ -86,7 +86,7 @@ const chatbotSidebar = {
         }
     },
 
-    openFAQMenu: function() {
+    openFAQMenu() {
         if (this.mainMenu) this.mainMenu.style.display = "none";
         if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
         if (this.faqMenu) this.faqMenu.style.display = "flex";
@@ -118,7 +118,7 @@ const chatbotSidebar = {
         }
     },
     
-    showMainMenu: function() {
+    showMainMenu() {
         if (this.mainMenu) this.mainMenu.style.display = "flex";
         if (this.faqMenu) this.faqMenu.style.display = "none";
         if (this.habitacionesMenu) this.habitacionesMenu.style.display = "none";
