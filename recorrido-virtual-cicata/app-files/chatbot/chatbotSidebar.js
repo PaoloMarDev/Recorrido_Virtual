@@ -71,7 +71,9 @@ const chatbotSidebar = {
         const btn = document.createElement("button");
         btn.className = "menu-item";
         btn.innerHTML = `
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2" style="flex-shrink:0;"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+          <svg viewBox="0 0 16 16" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.37892 10.2236L8 16L12.6211 10.2236C13.5137 9.10788 14 7.72154 14 6.29266V6C14 2.68629 11.3137 0 8 0C4.68629 0 2 2.68629 2 6V6.29266C2 7.72154 2.4863 9.10788 3.37892 10.2236ZM8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z" fill="white"></path>
+          </svg>
           ${scene.name}
         `;
         btn.onclick = () => {
@@ -101,7 +103,13 @@ const chatbotSidebar = {
       chatbotData.faqData.forEach((faq, index) => {
         const btn = document.createElement("button");
         btn.className = "faq-item menu-item";
-        btn.innerHTML = `<div class="faq-icon-circle">?</div> ${faq.title}`;
+        btn.innerHTML = `
+          <svg viewBox="0 0 16 16" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+            <path d="M5.5 5.5C5.5 4.11929 6.61929 3 8 3C9.38071 3 10.5 4.11929 10.5 5.5C10.5 6.88071 9.38071 8 8 8H7V11H8C11.0376 11 13.5 8.53757 13.5 5.5C13.5 2.46243 11.0376 0 8 0C4.96243 0 2.5 2.46243 2.5 5.5H5.5Z" fill="white"></path>
+            <path d="M10 13H7V16H10V13Z" fill="white"></path>
+          </svg>
+          ${faq.title}
+        `;
         btn.onclick = () => chatbotPopUp.openFAQModal(index);
         this.faqMenu.appendChild(btn);
       });
