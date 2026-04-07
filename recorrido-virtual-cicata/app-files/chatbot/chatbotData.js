@@ -43,11 +43,11 @@ const chatbotData = {
     ],
     ubicacion: {
         title: "Ubicación",
-        answer: "Blvrd de los Trabajadores, Villas del Descanso, 62574 Jiutepec, Mor."
+        answer: "<a href='https://www.google.com/maps?cid=11291604283853315302&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=MX&source=embed' target='_blank' style='text-decoration: underline;'>Boulevard de la Tecnología, 1036, Atlacholoaya, Código Postal 62790, Xochitepec, Morelos.</a>"
     },
     contactos: {
         title: "Contactos",
-        answer: "Correo general: contacto@cicatamorelos.ipn.mx\\n Teléfono general: (555) 123-4567"
+        answer: "Correo: <a href='https://www.cicatamorelos.ipn.mx/conocenos/contacto.html' target='_blank' style='text-decoration: underline;'>cicatamor@ipn.mx</a>\\n Teléfono: (777) 308 61 01"
     }
 };
 
