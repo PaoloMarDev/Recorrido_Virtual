@@ -1,35 +1,42 @@
 import chatbotData from './chatbotData.js';
 
 const chatbotPopUp = {
-    init() {
-        this.modal = document.getElementById("faq-modal");
-        this.titleObj = document.getElementById("modal-title");
-        this.bodyObj = document.getElementById("modal-body");
-        this.triggerContainer = document.getElementById("chatbot-trigger-container");
+  init() {
+    this.modal = document.getElementById("faq-modal");
+    this.titleObj = document.getElementById("modal-title");
+    this.bodyObj = document.getElementById("modal-body");
+    this.triggerContainer = document.getElementById("chatbot-trigger-container");
 
-        document.getElementById("modal-close-btn")?.addEventListener("click", () => this.closeFAQModal());
-        this.modal?.addEventListener("click", (e) => e.target === this.modal && this.closeFAQModal());
-    },
+    // Botón de cerrar
+    document.getElementById("modal-close-btn").onclick = () => this.closeFAQModal();
 
-    openFAQModal(index) {
-        const faq = chatbotData?.faqData[index];
-        if (faq) this.showContent(faq.title, faq.answer);
-    },
+    // Cerrar si se hace click fuera de la ventana blanca
+    this.modal.onclick = (e) => {
+      if (e.target === this.modal) {
+        this.closeFAQModal();
+      }
+    };
+  },
 
-    showContent(title, answer) {
-        if (!this.modal) return;
+  openFAQModal(index) {
+    const faq = chatbotData.faqData[index];
+    this.showContent(faq.title, faq.answer);
+  },
 
-        if (this.titleObj) this.titleObj.innerText = title;
-        if (this.bodyObj) this.bodyObj.innerHTML = answer.replace(/\\n/g, '<br><br>');
-        
-        this.modal.classList.replace("modal-hidden", "modal-visible");
-        this.triggerContainer?.classList.add("modal-active-blur");
-    },
+  showContent(title, answer) {
+    this.titleObj.innerText = title;
+    this.bodyObj.innerHTML = answer.replace(/\\n/g, '<br><br>');
 
-    closeFAQModal() {
-        this.modal?.classList.replace("modal-visible", "modal-hidden");
-        this.triggerContainer?.classList.remove("modal-active-blur");
-    }
+    this.modal.classList.remove("modal-hidden");
+    this.modal.classList.add("modal-visible");
+    this.triggerContainer.classList.add("modal-active-blur");
+  },
+
+  closeFAQModal() {
+    this.modal.classList.remove("modal-visible");
+    this.modal.classList.add("modal-hidden");
+    this.triggerContainer.classList.remove("modal-active-blur");
+  }
 };
 
 export default chatbotPopUp;
