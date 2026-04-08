@@ -5,8 +5,8 @@
   --ui-padding: 20px;
 }
 
-body:has(#sceneList.enabled) {
-  --sidebar-width: 220px;
+body:has(#chatbot-sidebar:not(.sidebar-hidden)) {
+  --sidebar-width: 320px;
 }
 
 * {
