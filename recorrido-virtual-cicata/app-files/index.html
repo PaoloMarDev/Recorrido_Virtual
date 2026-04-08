@@ -7,6 +7,7 @@
 <style> @-ms-viewport { width: device-width; } </style>
 <link rel="stylesheet" href="vendor/reset.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="minimap/minimap.css">
 <link rel="stylesheet" href="./styles/link-hotspot.css">
 <link rel="stylesheet" href="./styles/info-hotspots.css">
 <link rel="stylesheet" href="./styles/video-hotspots.css">
@@ -18,6 +19,20 @@
 <body class="multiple-scenes view-control-buttons">
 
 <div id="pano"></div>
+
+<div id="minimap-container">
+  <div id="minimap-content">
+    <img src="piso0.png" id="minimap-image" alt="Floorpan map">
+    <div id="user-dot">
+    </div>
+  </div>
+</div>
+
+<div id="floor-meter">
+  <div class="floor-label" data-floor="floor-2">F2</div>
+  <div class="floor-label" data-floor="floor-1">F1</div>
+  <div class="floor-label" data-floor="floor-0">F0</div>
+</div>
 
 <div id="sceneList">
   <ul class="scenes">
@@ -228,6 +243,7 @@
 <script src="vendor/screenfull.min.js" ></script>
 <script src="vendor/bowser.min.js" ></script>
 <script src="vendor/marzipano.js" ></script>
+<script src="minimap/minimap.js"></script>
 
 <script src="data.js"></script>
 <script type="module" src="index.js"></script>
