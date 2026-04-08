@@ -42,7 +42,25 @@ var APP_DATA = {
           "target": "2-letras-cicata"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [],
+      "videoHotspots": [
+        {
+          "yaw": -1.04339730574711709,
+          "pitch": 0.16778635584351953,
+          "title": "Pedro pica papas",
+          "text": "Pedro pica papas",
+          "video": "King of Meat bugs.mov"
+        },
+      ],
+      "imageHotspots": [
+        {
+          "yaw": -2.0,
+          "pitch": 0,
+          "title": "Pedro pica papas",
+          "text": "Pedro pica papas",
+          "image": "./img/mega.jpg"
+        }
+      ]
     },
     {
       "id": "1-zona-exterior",
@@ -146,8 +164,8 @@ var APP_DATA = {
         {
           "yaw": -2.2183552531072497,
           "pitch": -0.23716614446166417,
-          "title": "Title",
-          "text": "Text"
+          "title": "Prueba de hotspot",
+          "text": "Este es un texto de prueba para ver como funciona el hotspot de información"
         }
       ]
     },

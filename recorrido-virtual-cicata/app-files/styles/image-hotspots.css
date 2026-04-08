@@ -1,0 +1,125 @@
+/* image HOTSPOT */
+
+.image-hotspot {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BOTÓN (círculo rosa) */
+.image-hotspot .image-hotspot-header {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c2185b, #8e0038);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-hotspot-icon {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  pointer-events: none; /* evita bugs al hacer click */
+}
+
+.image-hotspot .image-hotspot-header:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(194, 24, 91, 0.6);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.image-hotspot .image-hotspot-content {
+  position: absolute;
+  top: 0;
+  left: 60px;
+
+  width: 380px;
+  max-height: 420px;
+
+  background: rgba(30, 30, 40, 0.95);
+  backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  border-left: 5px solid #c2185b;
+
+  padding: 20px;
+
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+
+  transition: all 0.4s ease;
+}
+
+/* CUANDO SE ABRE */
+.image-hotspot.visible .image-hotspot-content {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* TITULO */
+.image-hotspot .image-hotspot-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* TEXTO (SCROLL SI ES NECESARIO) */
+.image-hotspot .image-hotspot-text {
+  font-size: 14px;
+  color: #cfcfd6;
+  line-height: 1.5;
+
+  max-height: 120px;
+  overflow-y: auto;
+
+  margin-bottom: 15px;
+  padding-right: 5px;
+}
+
+/* SCROLL BONITO */
+.image-hotspot .image-hotspot-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.image-hotspot .image-hotspot-text::-webkit-scrollbar-thumb {
+  background: #c2185b;
+  border-radius: 10px;
+}
+
+/* IMAGE RESPONSIVE */
+.image-hotspot .image-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: black;
+}
+
+.image-hotspot-content img,
+.image-hotspot-content iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* BOTÓN CERRAR */
+.image-hotspot .image-hotspot-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.image-hotspot .image-hotspot-close:hover {
+  opacity: 1;
+}
