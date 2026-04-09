@@ -58,7 +58,7 @@ var APP_DATA = {
           "pitch": 0,
           "title": "Pedro pica papas",
           "text": "Pedro pica papas",
-          "image": "./img/mega.jpg"
+          "image": "./img/ImagenDePrueba.jpg"
         }
       ]
     },
