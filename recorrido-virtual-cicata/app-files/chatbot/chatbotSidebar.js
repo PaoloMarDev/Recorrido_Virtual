@@ -119,7 +119,7 @@ const chatbotSidebar = {
           setTimeout(() => {
               this.hideTypingIndicator();
               this.addBotMessage(`${data.title}:\n${data.answer}`);
-              this.addReturnOption();
+              this.addReturnOption(); // Llamada inmediata tras el mensaje
           }, 1500);
       }
   },
@@ -140,7 +140,7 @@ const chatbotSidebar = {
         }));
         
         this.addBotOptions(options);
-        this.addReturnOption();
+        this.addReturnOption(); // Llamada inmediata tras las opciones
     }, 1200);
   },
 
@@ -156,23 +156,22 @@ const chatbotSidebar = {
                 this.showTypingIndicator();
                 setTimeout(() => {
                     this.hideTypingIndicator();
-                    this.addBotMessage(`${faq.title}:\n${faq.answer}`);
-                    this.addReturnOption();
+                    this.addBotMessage(faq.answer);
+                    this.addReturnOption(); // Llamada inmediata tras la respuesta
                 }, 1000);
             }
         }));
         
         this.addBotOptions(options);
-        this.addReturnOption();
+        this.addReturnOption(); // Llamada inmediata tras el menú de preguntas
     }, 1200);
   },
 
   addReturnOption() {
-      setTimeout(() => {
-          this.addBotOptions([
-              { text: "⬅️ Volver al menú principal", action: () => this.startWelcomeFlow() }
-          ], false);
-      }, 1000);
+      // Se eliminó el setTimeout interno para que aparezca junto al mensaje anterior
+      this.addBotOptions([
+          { text: "⬅️ Volver al menú principal", action: () => this.startWelcomeFlow() }
+      ], false);
   }
 };
 
