@@ -43,11 +43,11 @@ const chatbotData = {
     ],
     ubicacion: {
         title: "Ubicación",
-        answer: "<a href='https://www.google.com/maps?cid=11291604283853315302&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=MX&source=embed' target='_blank' style='text-decoration: underline;'>Boulevard de la Tecnología, 1036, Atlacholoaya, Código Postal 62790, Xochitepec, Morelos.</a>"
+        answer: "📍 Boulevard de la Tecnología 1036, Atlacholoaya,\nC.P. 62790, Xochitepec, Morelos.\n\n🗺️ <a href='https://www.google.com/maps?cid=11291604283853315302&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=en&gl=MX&source=embed' target='_blank' rel='noopener noreferrer' style='color: inherit; text-decoration: underline;'>Ver mapa en Google Maps</a>"
     },
     contactos: {
         title: "Contactos",
-        answer: "Correo: <a href='https://www.cicatamorelos.ipn.mx/conocenos/contacto.html' target='_blank' style='text-decoration: underline;'>cicatamor@ipn.mx</a>\\n Teléfono: (777) 308 61 01"
+        answer: "📧 <b>Subdirección Académica</b>\n<a href='mailto:sa.cicatamor@ipn.mx' style='color: inherit; text-decoration: underline;'>sa.cicatamor@ipn.mx</a>\n\n📧 <b>Jefatura del Departamento de Posgrado</b>\n<a href='mailto:jdp.cicatamor@ipn.mx' style='color: inherit; text-decoration: underline;'>jdp.cicatamor@ipn.mx</a>"
     }
 };
 

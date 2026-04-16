@@ -1,5 +1,4 @@
 import chatbotData from './chatbotData.js';
-import chatbotPopUp from './chatbotPopUp.js';
 
 const chatbotSidebar = {
   isSidebarOpen: false,
@@ -7,22 +6,18 @@ const chatbotSidebar = {
   init() {
     this.sidebar = document.getElementById("chatbot-sidebar");
     this.toggleBtn = document.getElementById("chatbot-toggle-btn");
-    this.mainMenu = document.getElementById("main-menu");
-    this.faqMenu = document.getElementById("faq-menu");
-    this.habitacionesMenu = document.getElementById("habitaciones-menu");
-    this.headerTitle = document.getElementById("sidebar-header-title");
     this.helpBubble = document.getElementById("help-bubble-text");
+    this.chatMessages = document.getElementById("chat-messages");
+    this.closeBtn = document.getElementById("sidebar-close-btn");
 
     if (this.toggleBtn) {
       this.toggleBtn.onclick = () => {
         this.isSidebarOpen = !this.isSidebarOpen;
-        // Abrir sidebar
         if (this.isSidebarOpen) {
           this.sidebar.classList.remove("sidebar-hidden");
           if (this.helpBubble) this.helpBubble.style.display = 'none';
-          this.showMainMenu();
+          this.startWelcomeFlow();
         } 
-        // Cerrar sidebar
         else {
           this.sidebar.classList.add("sidebar-hidden");
           if (this.helpBubble) this.helpBubble.style.display = 'block';
@@ -30,91 +25,160 @@ const chatbotSidebar = {
       };
     }
 
-    const btnHabitaciones = document.getElementById("btn-habitaciones");
-    if (btnHabitaciones) btnHabitaciones.onclick = () => this.openHabitacionesMenu();
-
-    const btnFaq = document.getElementById("btn-faq");
-    if (btnFaq) btnFaq.onclick = () => this.openFAQMenu();
-
-    const btnPaginaOficial = document.getElementById("btn-pagina-oficial");
-    if (btnPaginaOficial) btnPaginaOficial.onclick = () => window.open('https://www.cicatamorelos.ipn.mx/', '_blank');
-
-    const btnUbicacion = document.getElementById("btn-ubicacion");
-    if (btnUbicacion) btnUbicacion.onclick = () => chatbotPopUp.showContent(chatbotData.ubicacion.title, chatbotData.ubicacion.answer);
-
-    const btnContactos = document.getElementById("btn-contactos");
-    if (btnContactos) btnContactos.onclick = () => chatbotPopUp.showContent(chatbotData.contactos.title, chatbotData.contactos.answer);
-  },
-
-  showMainMenu() {
-    this.mainMenu.style.display = "flex";
-    this.faqMenu.style.display = "none";
-    this.habitacionesMenu.style.display = "none";
-    this.headerTitle.innerHTML = "Menú Principal";
-  },
-
-  openHabitacionesMenu() {
-    this.mainMenu.style.display = "none";
-    this.faqMenu.style.display = "none";
-    this.habitacionesMenu.style.display = "flex";
-
-    this.headerTitle.innerHTML = "";
-    const backBtn = document.createElement("span");
-    backBtn.className = "back-btn";
-    backBtn.innerHTML = "&#10094;";
-    backBtn.onclick = () => this.showMainMenu();
-    this.headerTitle.appendChild(backBtn);
-    this.headerTitle.append(" Habitaciones");
-
-    if (this.habitacionesMenu.children.length === 0 && window.APP_DATA && window.APP_DATA.scenes) {
-      window.APP_DATA.scenes.forEach(scene => {
-        const btn = document.createElement("button");
-        btn.className = "menu-item";
-        btn.innerHTML = `
-          <svg viewBox="0 0 16 16" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.37892 10.2236L8 16L12.6211 10.2236C13.5137 9.10788 14 7.72154 14 6.29266V6C14 2.68629 11.3137 0 8 0C4.68629 0 2 2.68629 2 6V6.29266C2 7.72154 2.4863 9.10788 3.37892 10.2236ZM8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z" fill="white"></path>
-          </svg>
-          ${scene.name}
-        `;
-        btn.onclick = () => {
-          const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
-          if (nativo) nativo.click();
-          if (document.body.classList.contains('mobile')) this.toggleBtn.click();
+    if (this.closeBtn) {
+        this.closeBtn.onclick = () => {
+            this.isSidebarOpen = false;
+            this.sidebar.classList.add("sidebar-hidden");
+            if (this.helpBubble) this.helpBubble.style.display = 'block';
         };
-        this.habitacionesMenu.appendChild(btn);
-      });
     }
   },
 
-  openFAQMenu() {
-    this.mainMenu.style.display = "none";
-    this.habitacionesMenu.style.display = "none";
-    this.faqMenu.style.display = "flex";
+  startWelcomeFlow() {
+    this.chatMessages.innerHTML = ""; // Limpiar chat previo
+    
+    // Simular que el bot está escribiendo
+    this.showTypingIndicator();
 
-    this.headerTitle.innerHTML = "";
-    const backBtn = document.createElement("span");
-    backBtn.className = "back-btn";
-    backBtn.innerHTML = "&#10094;";
-    backBtn.onclick = () => this.showMainMenu();
-    this.headerTitle.appendChild(backBtn);
-    this.headerTitle.append(" Preguntas Frecuentes");
-
-    if (this.faqMenu.children.length === 0 && chatbotData) {
-      chatbotData.faqData.forEach((faq, index) => {
-        const btn = document.createElement("button");
-        btn.className = "faq-item menu-item";
-        btn.innerHTML = `
-          <svg viewBox="0 0 16 16" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-            <path d="M5.5 5.5C5.5 4.11929 6.61929 3 8 3C9.38071 3 10.5 4.11929 10.5 5.5C10.5 6.88071 9.38071 8 8 8H7V11H8C11.0376 11 13.5 8.53757 13.5 5.5C13.5 2.46243 11.0376 0 8 0C4.96243 0 2.5 2.46243 2.5 5.5H5.5Z" fill="white"></path>
-            <path d="M10 13H7V16H10V13Z" fill="white"></path>
-          </svg>
-          ${faq.title}
-        `;
-        btn.onclick = () => chatbotPopUp.openFAQModal(index);
-        this.faqMenu.appendChild(btn);
-      });
-    }
+    setTimeout(() => {
+        this.hideTypingIndicator();
+        this.addBotMessage("¡Hola! Soy CICATA bot, tu asesor virtual.");
+        
+        this.showTypingIndicator();
+        setTimeout(() => {
+            this.hideTypingIndicator();
+            this.addBotMessage("¿En qué puedo ayudarte hoy? Selecciona una de las siguientes opciones:");
+            this.addBotOptions([
+                { text: "🏢 Lista de habitaciones", action: () => this.handleHabitaciones() },
+                { text: "❓ Preguntas Frecuentes", action: () => this.handleFAQ() },
+                { text: "🌐 Página Oficial", action: () => this.handlePaginaOficial() },
+                { text: "📍 Ubicación", action: () => this.handlePopUp("ubicacion") },
+                { text: "📞 Contactos", action: () => this.handlePopUp("contactos") }
+            ]);
+        }, 400);
+    }, 400);
   },
+
+  showTypingIndicator() {
+      const indicator = document.createElement("div");
+      indicator.className = "bot-message typing-indicator";
+      indicator.id = "typing-indicator";
+      indicator.innerHTML = `<span></span><span></span><span></span>`;
+      this.chatMessages.appendChild(indicator);
+      this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+  },
+
+  hideTypingIndicator() {
+      const indicator = document.getElementById("typing-indicator");
+      if (indicator) indicator.remove();
+  },
+
+  addBotMessage(text) {
+      const msg = document.createElement("div");
+      msg.className = "bot-message";
+      // Allow HTML tags and preserve newlines using <br> if there are newlines outside tags
+      msg.innerHTML = text.replace(/\n/g, '<br>');
+      this.chatMessages.appendChild(msg);
+      this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+  },
+
+  addUserMessage(text) {
+      const msg = document.createElement("div");
+      msg.className = "user-message";
+      msg.innerText = text;
+      this.chatMessages.appendChild(msg);
+      this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+  },
+
+  addBotOptions(options, showUserMsg = true) {
+      const container = document.createElement("div");
+      container.className = "bot-message options-container";
+      
+      options.forEach(opt => {
+          const btn = document.createElement("button");
+          btn.className = "option-button";
+          btn.innerText = opt.text;
+          btn.onclick = () => {
+              if (showUserMsg) this.addUserMessage(opt.text);
+              opt.action();
+          };
+          container.appendChild(btn);
+      });
+
+      this.chatMessages.appendChild(container);
+      this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+  },
+
+  handlePopUp(key) {
+      const data = chatbotData[key];
+      if (data) {
+          this.showTypingIndicator();
+          setTimeout(() => {
+              this.hideTypingIndicator();
+              this.addBotMessage(`${data.title}:\n${data.answer}`);
+              this.addReturnOption(); // Llamada inmediata tras el mensaje
+          }, 400);
+      }
+  },
+
+  handleHabitaciones() {
+    this.showTypingIndicator();
+    setTimeout(() => {
+        this.hideTypingIndicator();
+        this.addBotMessage("Estas son las áreas disponibles en el recorrido. Haz clic en una para teletransportarte:");
+        
+        const scenes = (window.APP_DATA && window.APP_DATA.scenes) ? window.APP_DATA.scenes : [];
+        const options = scenes.map(scene => ({
+            text: `🏢 ${scene.name}`,
+            action: () => {
+                const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
+                if (nativo) nativo.click();
+            }
+        }));
+        
+        this.addBotOptions(options);
+        this.addReturnOption(); // Llamada inmediata tras las opciones
+    }, 400);
+  },
+
+  handleFAQ() {
+    this.showTypingIndicator();
+    setTimeout(() => {
+        this.hideTypingIndicator();
+        this.addBotMessage("Selecciona una pregunta para ver la respuesta:");
+        
+        const options = chatbotData.faqData.map((faq, index) => ({
+            text: `❓ ${faq.title}`,
+            action: () => {
+                this.showTypingIndicator();
+                setTimeout(() => {
+                    this.hideTypingIndicator();
+                    this.addBotMessage(faq.answer);
+                    this.addReturnOption(); // Llamada inmediata tras la respuesta
+                }, 400);
+            }
+        }));
+        
+        this.addBotOptions(options);
+        this.addReturnOption(); // Llamada inmediata tras el menú de preguntas
+    }, 400);
+  },
+
+  handlePaginaOficial() {
+      this.showTypingIndicator();
+      setTimeout(() => {
+          this.hideTypingIndicator();
+          this.addBotMessage(`<b>Sitio web:</b>\n 🌐 Descubre más sobre nosotros visitando:\n<a href="https://www.cicatamorelos.ipn.mx" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">https://www.cicatamorelos.ipn.mx/</a>`);
+          this.addReturnOption();
+      }, 400);
+  },
+
+  addReturnOption() {
+      // Se eliminó el setTimeout interno para que aparezca junto al mensaje anterior
+      this.addBotOptions([
+          { text: "⬅️ Volver al menú principal", action: () => this.startWelcomeFlow() }
+      ], false);
+  }
 };
 
 export default chatbotSidebar;
