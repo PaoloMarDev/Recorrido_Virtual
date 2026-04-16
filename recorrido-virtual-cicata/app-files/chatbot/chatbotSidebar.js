@@ -1,5 +1,4 @@
 import chatbotData from './chatbotData.js';
-import chatbotPopUp from './chatbotPopUp.js';
 
 const chatbotSidebar = {
   isSidebarOpen: false,
@@ -52,15 +51,12 @@ const chatbotSidebar = {
             this.addBotOptions([
                 { text: "🏢 Lista de habitaciones", action: () => this.handleHabitaciones() },
                 { text: "❓ Preguntas Frecuentes", action: () => this.handleFAQ() },
-                { text: "🌐 Página Oficial", action: () => {
-                    this.addBotMessage(`Puedes visitar nuestra página oficial aquí:\nhttps://www.cicatamorelos.ipn.mx/`);
-                    this.addReturnOption();
-                }},
+                { text: "🌐 Página Oficial", action: () => this.handlePaginaOficial() },
                 { text: "📍 Ubicación", action: () => this.handlePopUp("ubicacion") },
                 { text: "📞 Contactos", action: () => this.handlePopUp("contactos") }
             ]);
-        }, 1200);
-    }, 800);
+        }, 400);
+    }, 400);
   },
 
   showTypingIndicator() {
@@ -80,7 +76,8 @@ const chatbotSidebar = {
   addBotMessage(text) {
       const msg = document.createElement("div");
       msg.className = "bot-message";
-      msg.innerText = text;
+      // Allow HTML tags and preserve newlines using <br> if there are newlines outside tags
+      msg.innerHTML = text.replace(/\n/g, '<br>');
       this.chatMessages.appendChild(msg);
       this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
   },
@@ -120,7 +117,7 @@ const chatbotSidebar = {
               this.hideTypingIndicator();
               this.addBotMessage(`${data.title}:\n${data.answer}`);
               this.addReturnOption(); // Llamada inmediata tras el mensaje
-          }, 1500);
+          }, 400);
       }
   },
 
@@ -141,7 +138,7 @@ const chatbotSidebar = {
         
         this.addBotOptions(options);
         this.addReturnOption(); // Llamada inmediata tras las opciones
-    }, 1200);
+    }, 400);
   },
 
   handleFAQ() {
@@ -158,13 +155,22 @@ const chatbotSidebar = {
                     this.hideTypingIndicator();
                     this.addBotMessage(faq.answer);
                     this.addReturnOption(); // Llamada inmediata tras la respuesta
-                }, 1000);
+                }, 400);
             }
         }));
         
         this.addBotOptions(options);
         this.addReturnOption(); // Llamada inmediata tras el menú de preguntas
-    }, 1200);
+    }, 400);
+  },
+
+  handlePaginaOficial() {
+      this.showTypingIndicator();
+      setTimeout(() => {
+          this.hideTypingIndicator();
+          this.addBotMessage(`<b>Sitio web:</b>\n\n 🌐 Descubre más sobre nosotros visitando:\n\n<a href="https://www.cicatamorelos.ipn.mx" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">https://www.cicatamorelos.ipn.mx/</a>`);
+          this.addReturnOption();
+      }, 400);
   },
 
   addReturnOption() {

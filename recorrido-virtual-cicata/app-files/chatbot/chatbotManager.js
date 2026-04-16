@@ -1,6 +1,5 @@
 import chatbotHTMLTemplate from './chatbotHTMLTemplate.js';
 import chatbotSidebar from './chatbotSidebar.js';
-import chatbotPopUp from './chatbotPopUp.js';
 
 const chatbotManager = {
     injectHTML() {
@@ -9,7 +8,6 @@ const chatbotManager = {
     init() {
         this.injectHTML();
         chatbotSidebar.init();
-        chatbotPopUp.init();
     }
 };
 
