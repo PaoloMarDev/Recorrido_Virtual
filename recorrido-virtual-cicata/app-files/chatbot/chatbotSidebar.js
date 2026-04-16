@@ -168,7 +168,7 @@ const chatbotSidebar = {
       this.showTypingIndicator();
       setTimeout(() => {
           this.hideTypingIndicator();
-          this.addBotMessage(`<b>Sitio web:</b>\n\n 🌐 Descubre más sobre nosotros visitando:\n\n<a href="https://www.cicatamorelos.ipn.mx" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">https://www.cicatamorelos.ipn.mx/</a>`);
+          this.addBotMessage(`<b>Sitio web:</b>\n 🌐 Descubre más sobre nosotros visitando:\n<a href="https://www.cicatamorelos.ipn.mx" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">https://www.cicatamorelos.ipn.mx/</a>`);
           this.addReturnOption();
       }, 400);
   },
