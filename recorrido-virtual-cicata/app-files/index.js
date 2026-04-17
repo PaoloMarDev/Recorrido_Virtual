@@ -406,5 +406,18 @@ import { createImageHotspotElement } from "./hotspots/hsp_image.js";
   // Display the initial scene.
   switchScene(scenes[0]);
   
+
+
+document.getElementById('pano').addEventListener('mousedown', function(e) {
+  var coords = viewer.view().screenToCoordinates({
+    x: e.clientX,
+    y: e.clientY
+  });
+
+  console.log(coords);
+});
+
 })();
+
+
 

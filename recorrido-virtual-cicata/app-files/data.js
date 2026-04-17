@@ -30,14 +30,14 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 0.1294596363967706,
-          "pitch": -0.04151092886110064,
-          "rotation": 6.283185307179586,
+          "yaw": -0.5208853415230195,
+          "pitch": 0.0008839448952571161,
+          "rotation": 1.583185307179586,
           "target": "1-zona-exterior"
         },
         {
-          "yaw": -0.4772643962467029,
-          "pitch": -0.09065543442489243,
+          "yaw": -0.9061242135186589,
+          "pitch": -0.06317819442235262,
           "rotation": 0,
           "target": "2-letras-cicata"
         }
@@ -47,17 +47,17 @@ var APP_DATA = {
         {
           "yaw": -1.04339730574711709,
           "pitch": 0.16778635584351953,
-          "title": "Pedro pica papas",
-          "text": "Pedro pica papas",
-          "video": "King of Meat bugs.mov"
+          "title": "Hotspot de Video",
+          "text": "Este es un punto interactivo con el objetivo de mostrar videos.",
+          "video": "prueba.mp4"
         },
       ],
       "imageHotspots": [
         {
           "yaw": -2.0,
           "pitch": 0,
-          "title": "Pedro pica papas",
-          "text": "Pedro pica papas",
+          "title": "Hotspot de Imagen",
+          "text": "Este es un ppunto interactivo con el objetivo de mostrar imágenes",
           "image": "./img/ImagenDePrueba.jpg"
         }
       ]
@@ -254,380 +254,9 @@ var APP_DATA = {
           "rotation": 0,
           "target": "13-lobby-piso-1"
         },
-        {
-          "yaw": 0.294459113531909,
-          "pitch": 0.013795745115142921,
-          "rotation": 0,
-          "target": "5-entrada-bioterio"
-        }
       ],
       "infoHotspots": []
     },
-    {
-      "id": "5-entrada-bioterio",
-      "name": "Entrada-Bioterio",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": -0.5914318019059266,
-        "pitch": -0.012765000151370387,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        /*
-        { (Esto se va a eliminar)
-          "yaw": -0.7385727681256498,
-          "pitch": 0.05386655938713858,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        },
-        */
-        {
-          "yaw": 2.2923807511436323,
-          "pitch": 0.031686282451936165,
-          "rotation": 0,
-          "target": "4-estacionamiento-interior"
-        },
-        /*
-        {
-          "yaw": 0.18245284071836743,
-          "pitch": 0.05011252770234975,
-          "rotation": 4.71238898038469,
-          "target": "12-bioterio-sala-falta-nombre"
-        }
-        */
-      ],
-      "infoHotspots": []
-    },
-    /* 
-    {
-      "id": "6-pasillo-bioterio",
-      "name": "Pasillo-Bioterio",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": -0.05985934739248577,
-        "pitch": 0.21983597060592253,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": -2.965422125007498,
-          "pitch": 0.669652810321475,
-          "rotation": 0,
-          "target": "9-bioterior-sala-cuarentena"
-        },
-        {
-          "yaw": -0.8568523768220526,
-          "pitch": 0.19968093193499215,
-          "rotation": 0,
-          "target": "11-alojamiento-2"
-        },
-        {
-          "yaw": -0.5668096888434597,
-          "pitch": 0.22157595906239358,
-          "rotation": 1.5707963267948966,
-          "target": "10-alojamiento-1"
-        },
-        {
-          "yaw": 0.31340540126364935,
-          "pitch": 0.6331418804256437,
-          "rotation": 0,
-          "target": "8-rea-de-prodecimientos"
-        },
-        {
-          "yaw": 2.1291988326381617,
-          "pitch": 0.18565301514816746,
-          "rotation": 4.71238898038469,
-          "target": "12-bioterio-sala-falta-nombre"
-        },
-        {
-          "yaw": 2.4984418814944247,
-          "pitch": 0.18921893002205792,
-          "rotation": 1.5707963267948966,
-          "target": "5-entrada-bioterio"
-        },
-        {
-          "yaw": 2.504613830539639,
-          "pitch": 0.5388056142441329,
-          "rotation": 1.5707963267948966,
-          "target": "7-bioterio-almacen"
-        }
-      ],
-      "infoHotspots": []
-    },
-    
-    {
-      "id": "7-bioterio-almacen",
-      "name": "Bioterio-Almacen",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": 1.762999079077363,
-        "pitch": 0.40972725408095734,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": 1.1611518858206207,
-          "pitch": 0.306302985863681,
-          "rotation": 4.71238898038469,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "8-rea-de-prodecimientos",
-      "name": "Área-de-Prodecimientos",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": 2.599697504028727,
-        "pitch": 0.3057410076532747,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": 2.1222479595611814,
-          "pitch": 0.32351639104355456,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "9-bioterior-sala-cuarentena",
-      "name": "Bioterior-Sala-Cuarentena",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": -1.5267744695358516,
-        "pitch": 0.35254204510955844,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": 1.8195332972938472,
-          "pitch": 0.6779340434452124,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "10-alojamiento-1",
-      "name": "Alojamiento-1",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": 2.5549134919190983,
-        "pitch": 0.21131395961672794,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": 1.825283325167847,
-          "pitch": 0.24686448829238117,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "11-alojamiento-2",
-      "name": "Alojamiento-2",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": 1.8492311047620804,
-        "pitch": 0.29287601427739496,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": 1.2975833768592473,
-          "pitch": 0.4300366178476658,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "12-bioterio-sala-falta-nombre",
-      "name": "Bioterio-Sala-Falta-Nombre",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "yaw": -1.3964421433206518,
-        "pitch": 0.2852819036744112,
-        "fov": 1.5410497529145328
-      },
-      "linkHotspots": [
-        {
-          "yaw": -0.2888081161904541,
-          "pitch": 0.43140151743513044,
-          "rotation": 0,
-          "target": "5-entrada-bioterio"
-        },
-        {
-          "yaw": 1.609916494125355,
-          "pitch": 0.3222213519309154,
-          "rotation": 0,
-          "target": "6-pasillo-bioterio"
-        }
-      ],
-      "infoHotspots": []
-    },
-    */
     {
       "id": "13-lobby-piso-1",
       "name": "Lobby-Piso-1",
@@ -720,14 +349,14 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.8894203945317756,
-          "pitch": 0.02704057065891341,
+          "yaw": -2.0700771747217193,
+          "pitch": 0.029698471980335484,
           "rotation": 4.71238898038469,
           "target": "13-lobby-piso-1"
         },
         {
-          "yaw": 0.207327812862097,
-          "pitch": 0.03093505173534794,
+          "yaw": 1.0758450129502926,
+          "pitch": 0.0012919722453368365,
           "rotation": 0,
           "target": "15-mesa-reuniones"
         }
@@ -758,14 +387,14 @@ var APP_DATA = {
       ],
       "faceSize": 1520,
       "initialViewParameters": {
-        "yaw": -1.0687425554934968,
-        "pitch": 0.03256054106154416,
+        "yaw": -2.4506840987273293,
+        "pitch": 0.09260401484614178,
         "fov": 1.5410497529145328
       },
       "linkHotspots": [
         {
-          "yaw": -1.2554658508354066,
-          "pitch": 0.02027671738189163,
+          "yaw": 3.024863429412627,
+          "pitch": 0.05137695381964846,
           "rotation": 1.5707963267948966,
           "target": "14-oficinas-piso-1"
         }
@@ -846,20 +475,20 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 2.106967659320662,
-          "pitch": 0.2802178726378912,
+          "yaw": 2.3274110277221247,
+          "pitch": 0.04111521439268451,
           "rotation": 0,
           "target": "16-pasillo-entrada-laboratorios"
         },
         {
-          "yaw": -1.000887655592848,
-          "pitch": 0.13139920224792334,
+          "yaw": -0.7735083472471196,
+          "pitch": 0.14385152481009378,
           "rotation": 0,
           "target": "18-pasillo-laboratorios-2"
         },
         {
-          "yaw": -2.6626821215737344,
-          "pitch": 0.17496884481138153,
+          "yaw": -2.421664056412837,
+          "pitch": 0.17008485321496458,
           "rotation": 0,
           "target": "27-pasillo-laboratorios-6"
         }
@@ -1152,7 +781,14 @@ var APP_DATA = {
         "pitch": 0.14878386112298259,
         "fov": 1.5410497529145328
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 2.883195486589531,
+          "pitch": 0.13916217145836107,
+          "rotation": -1.5707963267948966,
+          "target": "22-pasillo-laboratorios-4"
+        }
+      ],
       "infoHotspots": [
         {
           "yaw": 0.3690356310004326,
@@ -1358,7 +994,7 @@ var APP_DATA = {
           "yaw": 2.0766797204137024,
           "pitch": 0.18234349201132893,
           "rotation": 1.5707963267948966,
-          "target": "29-laboratorio-falta-nombre"
+          "target": "29-acondicionamiento-de-material"
         }
       ],
       "infoHotspots": []
@@ -1402,8 +1038,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "29-laboratorio-falta-nombre",
-      "name": "Laboratorio-falta-nombre",
+      "id": "29-acondicionamiento-de-material",
+      "name": "Acondicionamiento-De-Material",
       "levels": [
         {
           "tileSize": 256,
@@ -1431,8 +1067,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 2.6859821414528042,
-          "pitch": 0.14444660360608275,
+          "yaw": 2.9715870778031768,
+          "pitch": 0.1259484233008159,
           "rotation": 4.71238898038469,
           "target": "27-pasillo-laboratorios-6"
         }
@@ -1733,8 +1369,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 1.4142501216853702,
-          "pitch": 0.12125739059313645,
+          "yaw": 0.6340813567268668,
+          "pitch": 0.07165237289873261,
           "rotation": 4.71238898038469,
           "target": "30-lobby-piso-2"
         },
@@ -1745,14 +1381,14 @@ var APP_DATA = {
           "target": "38-sala-grande"
         },
         {
-          "yaw": -2.111849656795224,
-          "pitch": 0.08388516545767999,
-          "rotation": 0,
+          "yaw": -2.122787371345469,
+          "pitch": 0.20343524177559047,
+          "rotation": -1.5,
           "target": "37-laboratorio-de-computo"
         },
         {
-          "yaw": -2.8746519329200932,
-          "pitch": 0.07526760272707556,
+          "yaw": -3.029162392323764,
+          "pitch": 0.24595664323615019,
           "rotation": 0,
           "target": "39-sala-pequea"
         }
@@ -1789,8 +1425,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.931088944371785,
-          "pitch": 0.07743520352131839,
+          "yaw": -2.268240939199151,
+          "pitch": 0.1823169622519174,
           "rotation": 1.5707963267948966,
           "target": "36-salas-vacias-segundo-piso"
         }
@@ -1827,8 +1463,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.2008036996770617,
-          "pitch": 0.037625751728285195,
+          "yaw": 2.2913957657260093,
+          "pitch": 0.060544612585138324,
           "rotation": 1.5707963267948966,
           "target": "36-salas-vacias-segundo-piso"
         }
@@ -1865,8 +1501,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.065346682283433,
-          "pitch": 0.15744330837754816,
+          "yaw": 1.778464565156483,
+          "pitch": 0.2433275693508996,
           "rotation": 0,
           "target": "36-salas-vacias-segundo-piso"
         }
