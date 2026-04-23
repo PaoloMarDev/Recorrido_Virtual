@@ -1,8 +1,10 @@
 :root {
   --topbar-height: 50px;
   --sidebar-width: 0px;
-  --bottom-height: 40px;
+  --bottom-height: 60px;
   --ui-padding: 20px;
+  --chatbot-height: 600px;
+  --chatbot-width: 50px;
 }
 
 body:has(#chatbot-sidebar:not(.sidebar-hidden)) {

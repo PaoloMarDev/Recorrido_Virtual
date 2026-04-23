@@ -385,7 +385,7 @@ import { createImageHotspotElement } from "./hotspots/hsp_image.js";
     '26-cromatografa-y-espectrofotometra' : { top: '70%', left: '31%', floor: 'floor-1' },
     '27-pasillo-laboratorios-6' : { top: '65%', left: '43%', floor: 'floor-1' },
     '28-bioprocesos' : { top: '70%', left: '39%', floor: 'floor-1' },
-    '29-laboratorio-falta-nombre' : { top: '72%', left: '48%', floor: 'floor-1' },
+    '29-acondicionamiento-de-material' : { top: '72%', left: '48%', floor: 'floor-1' },
     '30-lobby-piso-2' : { top: '43%', left: '63%', floor: 'floor-2' },
     '31-oficinas-segundo-piso' : { top: '50%', left: '27%', floor: 'floor-2' },
     '32-salon-clases-1' : { top: '72%', left: '22%', floor: 'floor-2' },

@@ -50,7 +50,7 @@
     right: var(--ui-padding); */
     /* left: calc(var(--sidebar-width) + var(--ui-padding)); */
 
-    width: calc(100vw - var(--sidebar-width) - var(--ui-padding) * 2);
+    width: calc(100vw - var(--sidebar-width) - var(--ui-padding) * 2 - var(--chatbot-width));
     height: calc(100vh - var(--topbar-height) - var(--ui-padding) * 2 - var(--bottom-height));
 
     /* max-width: 3000px; */
@@ -58,6 +58,26 @@
 
     cursor: zoom-out;
 }
+
+@media (max-width: 768px) {
+    #minimap-container.is-expanded {
+        /* En móvil normalmente no hay sidebar fijo */
+        width: calc(100vw - var(--ui-padding) * 2);
+        height: calc(100vh - var(--topbar-height) - var(--chatbot-height) - var(--ui-padding) * 2);
+
+        /* Opcional: ocupar toda la pantalla */
+        /* width: 100vw;
+        height: 100vh; */
+
+        left: var(--ui-padding);
+        right: var(--ui-padding);
+        bottom: var(--bottom-height);
+
+        cursor: zoom-out;
+    }
+}
+
+
 
 /* Medidor de piso */
 
