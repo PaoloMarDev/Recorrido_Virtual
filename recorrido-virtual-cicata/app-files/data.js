@@ -49,7 +49,7 @@ var APP_DATA = {
           "pitch": 0.16778635584351953,
           "title": "Hotspot de Video",
           "text": "Este es un punto interactivo con el objetivo de mostrar videos.",
-          "video": "prueba.mp4"
+          "video": "./videos/ConoceNuestraOferta.mp4"
         },
       ],
       "imageHotspots": [
