@@ -26,7 +26,7 @@ function createVideoHotspotElement(hotspot) {
   
   // Create image element.
   var icon = document.createElement('img');
-  icon.src = 'img/videoIcon.png';
+  icon.src = 'img/videoIcon.webp';
   icon.classList.add('video-hotspot-icon');
   header.appendChild(icon);
 

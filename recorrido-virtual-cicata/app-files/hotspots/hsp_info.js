@@ -25,7 +25,7 @@ import { stopTouchAndScrollEventPropagation } from "./funcionesGenerales.js";
 
   // Create info element.
   var icon = document.createElement('img');
-  icon.src = 'img/info.png';
+  icon.src = 'img/info.webp';
   icon.classList.add('info-hotspot-icon');
   header.appendChild(icon);
 

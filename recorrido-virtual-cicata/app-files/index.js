@@ -305,7 +305,7 @@ import { createImageHotspotElement } from "./hotspots/hsp_image.js";
 
     // Create image element.
     var icon = document.createElement('img');
-    icon.src = 'img/link.png';
+    icon.src = 'img/link.webp';
     icon.classList.add('link-hotspot-icon');
 
     // Set rotation transform.

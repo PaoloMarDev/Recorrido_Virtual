@@ -594,18 +594,6 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
-        {
-          "yaw": 0.9243392322791681,
-          "pitch": 0.13900939254760125,
-          "title": "Title",
-          "text": "Text"
-        },
-        {
-          "yaw": 2.0170826893490466,
-          "pitch": 0.09723116149784694,
-          "title": "Title",
-          "text": "Text"
-        }
       ]
     },
     {
