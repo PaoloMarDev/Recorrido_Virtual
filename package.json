@@ -1,0 +1,23 @@
+{
+  "name": "recorrido_virtual",
+  "version": "1.0.0",
+  "description": "Repositorio para el proyecto de TC3004, Recorrido Virtual para CICATA MORELOS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaoloMarDev/Recorrido_Virtual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaoloMarDev/Recorrido_Virtual/issues"
+  },
+  "homepage": "https://github.com/PaoloMarDev/Recorrido_Virtual#readme",
+  "dependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
