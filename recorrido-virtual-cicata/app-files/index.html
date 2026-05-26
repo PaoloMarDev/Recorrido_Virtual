@@ -7,14 +7,31 @@
 <style> @-ms-viewport { width: device-width; } </style>
 <link rel="stylesheet" href="vendor/reset.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="minimap/minimap.css">
 <link rel="stylesheet" href="./styles/link-hotspot.css">
 <link rel="stylesheet" href="./styles/info-hotspots.css">
 <link rel="stylesheet" href="./styles/video-hotspots.css">
+<link rel="stylesheet" href="./styles/chatbot/chatbotHTMLTemplate.css">
+<link rel="stylesheet" href="./styles/chatbot/chatbotSidebar.css">
 <link rel="stylesheet" href="./styles/image-hotspots.css">
 </head>
 <body class="multiple-scenes view-control-buttons">
 
 <div id="pano"></div>
+
+<div id="minimap-container">
+  <div id="minimap-content">
+    <img src="piso0.png" id="minimap-image" alt="Floorpan map">
+    <div id="user-dot">
+    </div>
+  </div>
+</div>
+
+<div id="floor-meter">
+  <div class="floor-label" data-floor="floor-2">F2</div>
+  <div class="floor-label" data-floor="floor-1">F1</div>
+  <div class="floor-label" data-floor="floor-0">F0</div>
+</div>
 
 <div id="sceneList">
   <ul class="scenes">
@@ -42,37 +59,6 @@
       <a href="javascript:void(0)" class="scene" data-id="5-entrada-bioterio">
         <li class="text">Entrada-Bioterio</li>
       </a>
-    
-      <!-- // Titulos del Bioterio (Esto se va a eliminar)
-      <a href="javascript:void(0)" class="scene" data-id="6-pasillo-bioterio">
-        <li class="text">Pasillo-Bioterio</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="7-bioterio-almacen">
-        <li class="text">Bioterio-Almacen</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="8-rea-de-prodecimientos">
-        <li class="text">Área-de-Prodecimientos</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="9-bioterior-sala-cuarentena">
-        <li class="text">Bioterior-Sala-Cuarentena</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="10-alojamiento-1">
-        <li class="text">Alojamiento-1</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="11-alojamiento-2">
-        <li class="text">Alojamiento-2</li>
-      </a>
-      
-      <a href="javascript:void(0)" class="scene" data-id="12-bioterio-sala-falta-nombre">
-        <li class="text">Bioterio-Sala-Falta-Nombre</li>
-      </a>
-      -->
-    
       <a href="javascript:void(0)" class="scene" data-id="13-lobby-piso-1">
         <li class="text">Lobby-Piso-1</li>
       </a>
@@ -137,8 +123,8 @@
         <li class="text">Bioprocesos</li>
       </a>
     
-      <a href="javascript:void(0)" class="scene" data-id="29-laboratorio-falta-nombre">
-        <li class="text">Laboratorio-falta-nombre</li>
+      <a href="javascript:void(0)" class="scene" data-id="29-acondicionamiento-de-material">
+        <li class="text">Acondicionamiento-De-Material</li>
       </a>
     
       <a href="javascript:void(0)" class="scene" data-id="30-lobby-piso-2">
@@ -189,45 +175,49 @@
 </div>
 
 <a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
+  <img class="icon off" src="img/play.webp">
+  <img class="icon on" src="img/pause.webp">
 </a>
 
 <a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
+  <img class="icon off" src="img/fullscreen.webp">
+  <img class="icon on" src="img/windowed.webp">
 </a>
 
 <a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
+  <img class="icon off" src="img/expand.webp">
+  <img class="icon on" src="img/collapse.webp">
 </a>
 
 <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
+  <img class="icon" src="img/up.webp">
 </a>
 <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
+  <img class="icon" src="img/down.webp">
 </a>
 <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
+  <img class="icon" src="img/left.webp">
 </a>
 <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
+  <img class="icon" src="img/right.webp">
 </a>
 <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
+  <img class="icon" src="img/plus.webp">
 </a>
 <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
+  <img class="icon" src="img/minus.webp">
 </a>
 
 <script src="vendor/screenfull.min.js" ></script>
 <script src="vendor/bowser.min.js" ></script>
 <script src="vendor/marzipano.js" ></script>
+<script src="minimap/minimap.js"></script>
 
 <script src="data.js"></script>
 <script type="module" src="index.js"></script>
+
+
+<script type="module" src="./chatbot/chatbotManager.js"></script>
 
 </body>
 </html>

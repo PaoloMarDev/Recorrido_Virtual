@@ -26,7 +26,7 @@ function createImageHotspotElement(hotspot) {
 
   // Create image element.
   var icon = document.createElement('img');
-  icon.src = 'img/imageIcon.png';
+  icon.src = 'img/imageIcon.webp';
   icon.classList.add('image-hotspot-icon');
   header.appendChild(icon);
 
