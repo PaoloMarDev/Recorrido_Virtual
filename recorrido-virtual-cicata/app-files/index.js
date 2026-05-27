@@ -16,9 +16,7 @@
 'use strict';
 
 import { stopTouchAndScrollEventPropagation } from "./hotspots/funcionesGenerales.js";
-import { createInfoHotspotElement } from "./hotspots/hsp_info.js";
-import { createVideoHotspotElement } from "./hotspots/hsp_video.js";
-import { createImageHotspotElement } from "./hotspots/hsp_image.js";
+import { createMediaHotspotElement } from "./hotspots/hsp_media.js";
 
 (function() {
   var Marzipano = window.Marzipano;
@@ -99,21 +97,9 @@ import { createImageHotspotElement } from "./hotspots/hsp_image.js";
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 
-    // Create info hotspots.
-    data.infoHotspots.forEach(function(hotspot) {
-      var element = createInfoHotspotElement(hotspot);
-      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
-    });
-    
-    // Create video hotspots.
-    (data.videoHotspots || []).forEach(function(hotspot) {
-      var element = createVideoHotspotElement(hotspot);
-      scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
-    });
-
     // Create image hotspots.
-    (data.imageHotspots || []).forEach(function(hotspot) {
-      var element = createImageHotspotElement(hotspot);
+    (data.mediaHotspots || []).forEach(function(hotspot) {
+      var element = createMediaHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
     });
 

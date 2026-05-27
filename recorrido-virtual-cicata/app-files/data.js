@@ -42,23 +42,69 @@ var APP_DATA = {
           "target": "2-letras-cicata"
         }
       ],
-      "infoHotspots": [],
-      "videoHotspots": [
+      "mediaHotspots": [
+        {
+          "yaw": -2.5339730574711709,
+          "pitch": 0.16778635584351953,
+          "title": "Hotspot de información",
+          "tag": "Equipo de laboratorio",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
+            },
+            {
+              "subtitle": "Componente clave:",
+              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
+            }
+          ]
+        },
         {
           "yaw": -1.04339730574711709,
           "pitch": 0.16778635584351953,
-          "title": "Hotspot de Video",
-          "text": "Este es un punto interactivo con el objetivo de mostrar videos.",
-          "video": "./videos/ConoceNuestraOferta.mp4"
+          "title": "Hotspot de Imagen",
+          "tag": "Equipo de laboratorio",
+          "image": "img/ImagenDePrueba.jpg",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
+            },
+            {
+              "subtitle": "Componente clave:",
+              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
+            }
+          ]
         },
-      ],
-      "imageHotspots": [
         {
           "yaw": -2.0,
           "pitch": 0,
-          "title": "Hotspot de Imagen",
-          "text": "Este es un ppunto interactivo con el objetivo de mostrar imágenes",
-          "image": "./img/ImagenDePrueba.jpg"
+          "title":    "Balanza analítica",
+          "tag":      "Equipo de laboratorio",
+          "video": "./videos/ConoceNuestraOferta.mp4",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
+            },
+            {
+              "subtitle": "Componente clave:",
+              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
+            }
+          ],
+          "link": ""
         }
       ]
     },
@@ -110,7 +156,6 @@ var APP_DATA = {
           "target": "3-estacionamiento-exterior"
         }
       ],
-      "infoHotspots": []
     },
     {
       "id": "2-letras-cicata",
