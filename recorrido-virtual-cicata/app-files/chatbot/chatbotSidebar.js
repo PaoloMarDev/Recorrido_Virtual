@@ -132,18 +132,19 @@ const chatbotSidebar = {
         this.hideTypingIndicator();
         this.addBotMessage("Estas son las áreas disponibles en el recorrido. Haz clic en una para teletransportarte:");
         
+        const defaultFloor = "floor-0";
         const scenes = (window.APP_DATA && window.APP_DATA.scenes) ? window.APP_DATA.scenes : [];
         const sceneFloorMap = window.SCENE_FLOOR_MAP || {};
         const floorLabels = {
-            "floor-0": "🌿 Piso 0",
+            [defaultFloor]: "🌿 Piso 0",
             "floor-1": "🧪 Piso 1",
             "floor-2": "📚 Piso 2"
         };
-        const floorOrder = ["floor-0", "floor-1", "floor-2"];
+        const floorOrder = [defaultFloor, "floor-1", "floor-2"];
         const groupedScenes = {};
 
         scenes.forEach(scene => {
-            const floor = sceneFloorMap[scene.id] || "floor-0";
+            const floor = sceneFloorMap[scene.id] || defaultFloor;
             if (!groupedScenes[floor]) groupedScenes[floor] = [];
             groupedScenes[floor].push(scene);
         });
@@ -162,7 +163,7 @@ const chatbotSidebar = {
                 options.push({
                     text: `🏢 ${scene.name}`,
                     action: () => {
-                        const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
+                        const nativo = document.querySelector(`#sceneList .scene[data-id="${scene.id}"]`);
                         if (nativo) nativo.click();
                     }
                 });
