@@ -128,17 +128,51 @@ const chatbotSidebar = {
         this.addBotMessage("Estas son las áreas disponibles en el recorrido. Haz clic en una para teletransportarte:");
         
         const scenes = (window.APP_DATA && window.APP_DATA.scenes) ? window.APP_DATA.scenes : [];
-        const options = scenes.map(scene => ({
+        const sceneFloorMap = window.SCENE_FLOOR_MAP || {};
+        const floorOrder = ["floor-0", "floor-1", "floor-2"];
+        const groupedScenes = floorOrder.reduce((groups, floor) => {
+            groups[floor] = [];
+            return groups;
+        }, {});
+        groupedScenes["unknown"] = [];
+
+        scenes.forEach(scene => {
+            const floor = sceneFloorMap[scene.id] || "unknown";
+            const option = {
             text: `🏢 ${scene.name}`,
             action: () => {
                 const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
                 if (nativo) nativo.click();
             }
-        }));
-        
-        this.addBotOptions(options);
+            };
+
+            if (groupedScenes[floor]) {
+                groupedScenes[floor].push(option);
+            } else {
+                groupedScenes.unknown.push(option);
+            }
+        });
+
+        floorOrder.forEach(floor => {
+            if (!groupedScenes[floor].length) return;
+            this.addBotMessage(`--- ${this.getFloorLabel(floor)} ---`);
+            this.addBotOptions(groupedScenes[floor]);
+        });
+
+        if (groupedScenes.unknown.length) {
+            this.addBotMessage("--- Otras áreas ---");
+            this.addBotOptions(groupedScenes.unknown);
+        }
+
         this.addReturnOption(); // Llamada inmediata tras las opciones
     }, 400);
+  },
+
+  getFloorLabel(floor) {
+      if (floor === "floor-0") return "Piso 0";
+      if (floor === "floor-1") return "Piso 1";
+      if (floor === "floor-2") return "Piso 2";
+      return "Sin piso";
   },
 
   handleFAQ() {
