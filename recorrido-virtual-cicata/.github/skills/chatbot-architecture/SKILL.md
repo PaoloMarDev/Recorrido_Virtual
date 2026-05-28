@@ -14,19 +14,19 @@ Para que el chatbot funcione correctamente, debe estar alineado con los datos ma
 
 ### 1. El Eje Central: data.js
 
-- **Referencia**: [recorrido-virtual-cicata/app-files/data.js](recorrido-virtual-cicata/app-files/data.js)
+- **Referencia**: [app-files/data.js](../../../app-files/data.js)
 - **Importancia**: Si el chatbot debe referenciar escenas o hotspots, los IDs deben coincidir exactamente con los definidos en `APP_DATA.scenes`.
 
 ### 2. Estructura del Chatbot
 
-- **Lógica de Interacción**: [recorrido-virtual-cicata/app-files/chatbot/chatbotSidebar.js](recorrido-virtual-cicata/app-files/chatbot/chatbotSidebar.js). Aquí se gestionan los flujos de conversación.
-- **Base de Conocimientos (FAQ)**: [recorrido-virtual-cicata/app-files/chatbot/chatbotData.js](recorrido-virtual-cicata/app-files/chatbot/chatbotData.js). Es el lugar principal para añadir nuevas respuestas.
-- **Interfaz de Usuario**: [recorrido-virtual-cicata/app-files/chatbot/chatbotHTMLTemplate.js](recorrido-virtual-cicata/app-files/chatbot/chatbotHTMLTemplate.js).
-- **Estilos Visuales**: [recorrido-virtual-cicata/app-files/styles/chatbot/](recorrido-virtual-cicata/app-files/styles/chatbot/).
+- **Lógica de Interacción**: [app-files/chatbot/chatbotSidebar.js](../../../app-files/chatbot/chatbotSidebar.js). Aquí se gestionan los flujos de conversación.
+- **Base de Conocimientos (FAQ)**: [app-files/chatbot/chatbotData.js](../../../app-files/chatbot/chatbotData.js). Es el lugar principal para añadir nuevas respuestas.
+- **Interfaz de Usuario**: [app-files/chatbot/chatbotHTMLTemplate.js](../../../app-files/chatbot/chatbotHTMLTemplate.js).
+- **Estilos Visuales**: [app-files/styles/chatbot/](../../../app-files/styles/chatbot/).
 
 ### 3. Conectividad con Marzipano
 
-- **Cambio de Escena**: Si una opción del chatbot debe teletransportar al usuario, se debe invocar la lógica de navegación definida en [recorrido-virtual-cicata/app-files/index.js](recorrido-virtual-cicata/app-files/index.js).
+- **Cambio de Escena**: Si una opción del chatbot debe teletransportar al usuario, se debe invocar la lógica de navegación definida en [app-files/index.js](../../../app-files/index.js).
 
 ## Procedimientos para el Chatbot
 
