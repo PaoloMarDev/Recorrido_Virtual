@@ -384,6 +384,11 @@ import { createMediaHotspotElement } from "./hotspots/hsp_media.js";
     '39-sala-pequea' : { top: '48%', left: '86%', floor: 'floor-2' }
   };
 
+  window.SCENE_FLOOR_MAP = Object.keys(mapCoordinates).reduce((acc, sceneId) => {
+    acc[sceneId] = mapCoordinates[sceneId].floor;
+    return acc;
+  }, {});
+
   let currentVisibleFloor = null;
 
   const userDot = document.getElementById('user-dot');
@@ -404,6 +409,5 @@ document.getElementById('pano').addEventListener('mousedown', function(e) {
 });
 
 })();
-
 
 

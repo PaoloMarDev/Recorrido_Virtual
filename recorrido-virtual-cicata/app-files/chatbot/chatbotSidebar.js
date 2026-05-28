@@ -98,10 +98,15 @@ const chatbotSidebar = {
           const btn = document.createElement("button");
           btn.className = "option-button";
           btn.innerText = opt.text;
-          btn.onclick = () => {
-              if (showUserMsg) this.addUserMessage(opt.text);
-              opt.action();
-          };
+          if (opt.isGroupLabel) {
+              btn.disabled = true;
+              btn.classList.add("option-button-label");
+          } else {
+              btn.onclick = () => {
+                  if (showUserMsg) this.addUserMessage(opt.text);
+                  opt.action();
+              };
+          }
           container.appendChild(btn);
       });
 
@@ -128,13 +133,41 @@ const chatbotSidebar = {
         this.addBotMessage("Estas son las áreas disponibles en el recorrido. Haz clic en una para teletransportarte:");
         
         const scenes = (window.APP_DATA && window.APP_DATA.scenes) ? window.APP_DATA.scenes : [];
-        const options = scenes.map(scene => ({
-            text: `🏢 ${scene.name}`,
-            action: () => {
-                const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
-                if (nativo) nativo.click();
-            }
-        }));
+        const sceneFloorMap = window.SCENE_FLOOR_MAP || {};
+        const floorLabels = {
+            "floor-0": "🌿 Piso 0",
+            "floor-1": "🧪 Piso 1",
+            "floor-2": "📚 Piso 2"
+        };
+        const floorOrder = ["floor-0", "floor-1", "floor-2"];
+        const groupedScenes = {};
+
+        scenes.forEach(scene => {
+            const floor = sceneFloorMap[scene.id] || "floor-0";
+            if (!groupedScenes[floor]) groupedScenes[floor] = [];
+            groupedScenes[floor].push(scene);
+        });
+
+        const options = [];
+        floorOrder.forEach(floor => {
+            const floorScenes = groupedScenes[floor];
+            if (!floorScenes || !floorScenes.length) return;
+
+            options.push({
+                text: floorLabels[floor] || `🏢 ${floor}`,
+                isGroupLabel: true
+            });
+
+            floorScenes.forEach(scene => {
+                options.push({
+                    text: `🏢 ${scene.name}`,
+                    action: () => {
+                        const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
+                        if (nativo) nativo.click();
+                    }
+                });
+            });
+        });
         
         this.addBotOptions(options);
         this.addReturnOption(); // Llamada inmediata tras las opciones

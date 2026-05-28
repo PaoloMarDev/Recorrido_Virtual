@@ -141,6 +141,15 @@
     box-shadow: 0 5px 12px rgba(140, 0, 70, 0.25);
 }
 
+.option-button.option-button-label,
+.option-button.option-button-label:hover {
+    background: #8c0046 !important;
+    color: #ffffff !important;
+    cursor: default;
+    transform: none;
+    box-shadow: 0 3px 6px rgba(140, 0, 70, 0.08);
+}
+
 /* Typing Indicator */
 .typing-indicator { 
     padding: 14px 18px; 
