@@ -12,7 +12,7 @@ const chatbotHTMLTemplate = `
         <div id="chatbot-sidebar" class="sidebar-hidden">
             <div class="sidebar-header">
                 <div class="header-info">
-                    <span style="font-weight: bold; color: white;">CICATA bot</span>
+                    <span style="font-weight: bold; color: white;">Policarpio</span>
                 </div>
                 <div class="header-icons">
                     <span class="header-icon" id="sidebar-close-btn" style="cursor: pointer; font-size: 1.2rem;">✕</span>
