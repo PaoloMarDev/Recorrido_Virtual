@@ -43,7 +43,18 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
-        
+        {
+          yaw: -1.1427691333032666, 
+          pitch: -0.185191855868041,
+          "title": "CICATA Unidad Morelos",
+          "tag": "Exterior",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "CICATA Unidad Morelos es un centro de investigación que se crea con el objetivo de fortalecer el ecosistema de innovación de la región centro sur del país con un enfoque en la creación de conocimiento científico, desarrollos tecnológicos, personal altamente calificado y servicios tecnológicos y de educación continua con una vinculación eficiente con los sectores productivos privados, públicos y sociales."
+            },
+          ]
+        }
       ]
     },
     {
@@ -94,6 +105,9 @@ var APP_DATA = {
           "target": "3-estacionamiento-exterior"
         }
       ],
+      "mediaHotspots":[
+
+      ]
     },
     {
       "id": "2-letras-cicata",
@@ -143,12 +157,18 @@ var APP_DATA = {
           "target": "1-zona-exterior"
         }
       ],
-      "infoHotspots": [
+      "mediaHotspots": [
         {
-          "yaw": -2.2183552531072497,
-          "pitch": -0.23716614446166417,
-          "title": "Prueba de hotspot",
-          "text": "Este es un texto de prueba para ver como funciona el hotspot de información"
+          yaw: -2.559026284010356, 
+          pitch: -0.23426925838304768,
+          "title": "Letras de CICATA",
+          "tag": "Exterior",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Inaugurado el 13 de julio de 2022, el CICATA Unidad Morelos inició sus actividades académicas con el Posgrado en Ciencia y Tecnología de Vacunas y Bioterapéuticos, un programa de maestría y doctorado que forma especialistas capaces de contribuir al desarrollo científico y tecnológico en áreas estratégicas para la salud."
+            },
+          ]
         }
       ]
     },
@@ -194,7 +214,6 @@ var APP_DATA = {
           "target": "1-zona-exterior"
         }
       ],
-      "infoHotspots": []
     },
     {
       "id": "4-estacionamiento-interior",
@@ -238,7 +257,7 @@ var APP_DATA = {
           "target": "13-lobby-piso-1"
         },
       ],
-      "infoHotspots": []
+      "mediaHotspots": []
     },
     {
       "id": "13-lobby-piso-1",
@@ -300,7 +319,9 @@ var APP_DATA = {
           "target": "16-pasillo-entrada-laboratorios"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        
+      ]
     },
     {
       "id": "14-oficinas-piso-1",
@@ -344,7 +365,7 @@ var APP_DATA = {
           "target": "15-mesa-reuniones"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": []
     },
     {
       "id": "15-mesa-reuniones",
@@ -382,7 +403,21 @@ var APP_DATA = {
           "target": "14-oficinas-piso-1"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -2.7265317960115674, 
+          pitch: 0.27912179894582856,
+          "title": "Sala Circular I",
+          "tag": "Habitación",
+          "image": "img/areasCICATA/3.- Sala Circular I.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La Sala Circular I es un espacio destinado a la realización de reuniones de trabajo y actividades de carácter administrativo. Su distribución facilita el desarrollo de sesiones de coordinación, planeación y seguimiento de proyectos, así como reuniones institucionales que favorecen la comunicación y la colaboración."
+            },
+          ]
+        }
+      ]
     },
     {
       "id": "16-pasillo-entrada-laboratorios",
@@ -426,7 +461,21 @@ var APP_DATA = {
           "target": "17-pasillo-laboratorios-1"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 1.891506385418853, 
+          pitch: -0.05810976773962828,
+          "title": "Esclusa",
+          "tag": "Habitación",
+          "image": "img/areasCICATA/5.- Esclusa.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La esclusa es un área de transición con vestidores donde los usuarios preparan su indumentaria y resguardan en lockers aquellos objetos que no deben ingresar a las zonas de trabajo experimental, garantizando condiciones adecuadas de seguridad e higiene."
+            },
+          ]
+        }
+      ]
     },
     {
       "id": "17-pasillo-laboratorios-1",
@@ -476,7 +525,21 @@ var APP_DATA = {
           "target": "27-pasillo-laboratorios-6"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -1.2664039748232376, 
+          pitch: -0.007368644456885676,
+          "title": "Laboratorios",
+          "tag": "Laboratorio",
+          "image": "img/areasCICATA/4.- Laboratorios.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Los laboratorios son espacios especializados para el desarrollo de investigación en ciencia aplicada y tecnología avanzada. Cuentan con un sistema de acceso por huella digital que permite el ingreso únicamente a personal autorizado, garantizando la seguridad de las instalaciones y equipos."
+            },
+          ]
+        }
+      ]
     },
     {
       "id": "18-pasillo-laboratorios-2",
@@ -520,7 +583,21 @@ var APP_DATA = {
           "target": "19-pasillo-laboratorios-3"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 1.3718705766617862, 
+          pitch: 0.10264924954252841,
+          "title": "Área de Bioinformática ",
+          "tag": "Laboratorio",
+          "image": "img/areasCICATA/6.-Bioinformatica.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El área de bioinformática es un espacio multifuncional diseñado para facilitar el análisis de datos biológicos y la gestión de información. Equipado con un equipo de cómputo avanzado, este cubículo no solo permite llevar a cabo análisis complejos, sino que también se utiliza como un área de reuniones entre usuarios."
+            },
+          ]
+        }
+      ]
     },
     {
       "id": "19-pasillo-laboratorios-3",
@@ -576,7 +653,33 @@ var APP_DATA = {
           "target": "21-cultivo-celular-y-microscopia"
         }
       ],
-      "infoHotspots": [
+      "mediaHotspots": [
+        {
+          yaw: 1.975177931231615, 
+          pitch: 0.07848417264237284,
+          "title": "Unidad de Terapia Celular BSL-2",
+          "tag": "Laboratorio",
+          "image": "img/areasCICATA/8.- Unidad de Terapia Celular BLS2.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Laboratorio con nivel de bioseguridad 2 diseñado para el cultivo, mantenimiento, expansión y caracterización de células de interés biomédico. Esta unidad permite el desarrollo de investigación en terapia celular, medicina regenerativa y evaluación preclínica de nuevas estrategias terapéuticas, además de apoyar actividades académicas y de formación de estudiantes de licenciatura y posgrado en áreas relacionadas con las ciencias biológicas y de la salud."
+            },
+          ]
+        },
+        {
+          yaw: 1.236941271470183, 
+          pitch: 0.20769300250038825,
+          "title": "Unidad de Investigación Microbiológica para el desarrollo de vacunas y bioterapéuticos BSL-2",
+          "tag": "Laboratorio",
+          "image": "img/areasCICATA/9.-Unidad de Investigación Microbiológica para el desarrollo de vacunas y bioterapéuticos BLS2.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Área especializada en el estudio de microorganismos de interés biomédico y biotecnológico, orientada al desarrollo y evaluación de vacunas, bioterapéuticos y otras tecnologías aplicadas a la salud. La unidad cuenta con las condiciones de bioseguridad requeridas para realizar investigación microbiológica, inmunológica y de biología molecular, contribuyendo a la generación de conocimiento científico y al fortalecimiento de las capacidades nacionales en materia de prevención y tratamiento de enfermedades."
+            },
+          ]
+        }
       ]
     },
     {
@@ -616,6 +719,19 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
+        {
+          yaw: 2.6769871017252163, 
+          pitch: 0.008421492020149302,
+          "title": "Biología Molecular",
+          "tag": "Laboratorio",
+          "image": "img/areasCICATA/10.- Biología Molecular.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Es un espacio especializado equipado con las herramientas y tecnología necesarias para estudiar los ácidos nucleicos de los organismos, incluyendo ADN y ARN. Este laboratorio es fundamental en el Centro de Investigación, ya que permite realizar ensayos que ayuden a entender los procesos biológicos a nivel molecular, generar construcciones para la expresión de proteínas de interés, identificar mutaciones y secuencias específicas, etc. "
+            },
+          ]
+        },
         {
           "yaw": 0.8917419215550062, 
           "pitch": 0.1320556493301357,
@@ -750,6 +866,7 @@ var APP_DATA = {
           pitch: 0.23429732922500968,
           "title": "Cultivo Celular y Microscopía",
           "tag": "Habitación",
+          "image" : "img/areasCICATA/12.- Cultivo Celular y Microscopía.webp",
           "sections": [
             {
               "subtitle": "Descripción:",
@@ -783,6 +900,7 @@ var APP_DATA = {
           pitch: 0.068419439709551,
           "title": "Cuarto anexo a cultivo celular",
           "tag": "Habitación",
+          "image": "img/areasCICATA/13.- Cuarto anexo .webp",
           "sections": [
             {
               "subtitle": "Descripción:",
@@ -930,7 +1048,7 @@ var APP_DATA = {
           "target": "21-cultivo-celular-y-microscopia"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": []
     },
     {
       "id": "23-microbiologa",
@@ -973,7 +1091,8 @@ var APP_DATA = {
           yaw: -0.8608338891432936, 
           pitch: 0.6360365382306004,
           "title": "Microbiología",
-          "tag": "Habitación",
+          "tag": "Laboratorio",
+          "image" : "img/areasCICATA/14.- Microbiología.webp",
           "sections": [
             {
               "subtitle": "Descripción:",
@@ -1100,13 +1219,20 @@ var APP_DATA = {
           "target": "22-pasillo-laboratorios-4"
         }
       ],
-      "infoHotspots": [
+      "mediaHotspots": [
         {
-          "yaw": 1.0990289515300589,
-          "pitch": 0.19526464416981426,
-          "title": "Title",
-          "text": "Text"
-        }
+          yaw: 1.0454188106535351, 
+          pitch: 0.13305256860035541,
+          "title": "Almacén",
+          "tag": "Habitación",
+          "image" : "img/areasCICATA/17.- Almacen.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El almacén está destinado al resguardo de materiales, insumos, consumibles, reactivos y equipos. Este espacio también dispone de un sistema de congelación para aquellos insumos que requieren condiciones especiales de almacenamiento."
+            }
+          ]
+        },
       ]
     },
     {
@@ -1145,7 +1271,20 @@ var APP_DATA = {
           "target": "24-pasillo-laboratorios-5"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -1.6356515967451664, 
+          pitch: -0.040109447044320845,
+          "title": "Cámara Refrigerada",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La cámara refrigerada se utiliza para el almacenamiento y manejo de muestras, reactivos e insumos en grandes volúmenes, incluyendo principios activos, excipientes y formulaciones. Opera en un intervalo de temperatura de 4 a 8 °C, lo que permite conservar adecuadamente estos materiales. Aquí se resguardan los tanques de nitrógeno líquido, que sirven para el almacenamiento de diversas muestras en criopreservación."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "26-cromatografa-y-espectrofotometra",
@@ -1184,6 +1323,18 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
+        {
+          yaw: -1.6356515967451664, 
+          pitch: -0.040109447044320845,
+          "title": "Cromatografía y espectrofotometría",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Laboratorio de Cromatografía y Espectrometría está destinado a la preparación y análisis de moléculas con potencial bioterapéutico. Cuenta con acabados que cumplen con normas de buenas prácticas de laboratorio y manufactura. Actualmente, dispone de un espectrofotómetro, sistemas de electroforesis para proteínas y un equipo fotodocumentador para la visualización de geles de proteínas y ácidos nucleicos."
+            }
+          ]
+        },
         {
           yaw: 0.8441552565477437, 
           pitch: 0.11807807366217915,
@@ -1282,7 +1433,7 @@ var APP_DATA = {
           "target": "29-acondicionamiento-de-material"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": []
     },
     {
       "id": "28-bioprocesos",
@@ -1321,6 +1472,18 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
+        {
+          yaw: 0, 
+          pitch: 0,
+          "title": "Bioprocesos",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El laboratorio de Bioprocesos tiene como objetivo escalar los procesos para obtención de los potenciales productos bioterapéuticos así como su formulación terapéutica mediante el uso, por ejemplo, de biorreactores. Actualmente es un área que se encuentra lista para el establecimiento de cualquier proceso escalable."
+            }
+          ]
+        },
         {
           yaw: 0.5555040968347527, 
           pitch: 0.024187236804149137,
@@ -1381,6 +1544,18 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
+        {
+          yaw: -1.2153071033146823, 
+          pitch: -0.04321566762675211,
+          "title": "Acondicionamiento de material",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Laboratorio de Acondicionamiento es un área de apoyo donde se realizan preparaciones generales y el acondicionamiento de materiales, reactivos y materias primas. Está equipado con un sistema purificador de agua tipo I y II, balanzas analítica y granataria, potenciómetro, horno de convección, autoclave, máquina de hielo y parrillas de agitación."
+            }
+          ]
+        },
         {
           yaw: -2.5189156518849884, 
           pitch: 0.17355939244038332,
@@ -1515,7 +1690,7 @@ var APP_DATA = {
           "target": "31-oficinas-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": []
     },
     {
       "id": "31-oficinas-segundo-piso",
@@ -1577,7 +1752,33 @@ var APP_DATA = {
           "target": "34-biblioteca"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 1.4651052027815643, 
+          pitch: 0.3043617868937094,
+          "title": "Subdirección Académica",
+          "tag": "Educación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Subdirección académica es un espacio dedicado a la formación de estudiantes de posgrado y al desarrollo de las actividades académicas del Centro. En esta área se llevan a cabo actividades de enseñanza, aprendizaje e investigación en las que participan docentes y estudiantes, promoviendo la colaboración y la generación de conocimiento. Asimismo, cuenta con aulas para la impartición de clases, seminarios y otras actividades formativas, así como con una biblioteca que brinda apoyo a las labores de estudio e investigación. Este espacio constituye un elemento esencial para el fortalecimiento de la vida académica y la formación de recursos humanos altamente especializados."
+            }
+          ]
+        },
+        {
+          yaw: -0.7175979891110504, 
+          pitch: -0.03670347463613055,
+          "title": "Aula Magna",
+          "tag": "Educación",
+          "image": "img/areasCICATA/26.-Aula Magna.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Uno de los principales espacios para el desarrollo de actividades académicas e institucionales del Centro. Aquí se llevan a cabo seminarios, conferencias, pláticas, talleres, capacitaciones, reuniones y otros eventos orientados a la formación especializada y la generación de conocimiento. Este espacio reúne a estudiantes, docentes y personal administrativo, favoreciendo el intercambio de ideas y fortaleciendo la vida académica y científica de nuestra comunidad."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "32-salon-clases-1",
@@ -1615,7 +1816,21 @@ var APP_DATA = {
           "target": "31-oficinas-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 1.4651052027815643, 
+          pitch: 0.3043617868937094,
+          "title": "Aula I",
+          "tag": "Educación",
+          "image": "img/areasCICATA/27.- Aula I.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Aula I es un espacio destinado principalmente al desarrollo de actividades académicas y de enseñanza. Está equipada para que docentes e investigadores puedan impartir clases, cursos y seminarios, brindando un entorno adecuado para el aprendizaje y la formación especializada de estudiantes y participantes."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "33-salon-clases-2",
@@ -1653,7 +1868,21 @@ var APP_DATA = {
           "target": "31-oficinas-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 0.6562949384135734, 
+          pitch: 0.45893000761811287,
+          "title": "Aula II",
+          "tag": "Educación",
+          "image": "img/areasCICATA/28.- Aula II.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Aula 2 está diseñada para apoyar las actividades de presentación y seguimiento académico de los estudiantes. En este espacio, los alumnos pueden exponer avances de proyectos, resultados de investigación y trabajos académicos, fomentando la comunicación, el análisis y el intercambio de conocimientos."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "34-biblioteca",
@@ -1691,7 +1920,21 @@ var APP_DATA = {
           "target": "31-oficinas-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -0.7377421395509547, 
+          pitch: 0.33122895501857386,
+          "title": "Biblioteca",
+          "tag": "Educación",
+          "image": "img/areasCICATA/29.-Biblioteca.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La biblioteca es un espacio destinado a la consulta y estudio, donde estudiantes, administrativos e investigadores tienen acceso a material especializado que apoya las actividades académicas y de investigación."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "35-sala-reuniones-2",
@@ -1729,7 +1972,21 @@ var APP_DATA = {
           "target": "31-oficinas-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -0.09680337167415765, 
+          pitch: 0.5336651378149924,
+          "title": "Sala Circular II",
+          "tag": "Educación",
+          "image": "img/areasCICATA/30.- Sala Circular II.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La Sala Circular II es un espacio destinado principalmente a reuniones y actividades administrativas. Por sus dimensiones y distribución, permite la realización de juntas de trabajo, sesiones de planeación, reuniones institucionales y actividades de coordinación, proporcionando un entorno adecuado para la comunicación y la toma de decisiones."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "36-salas-vacias-segundo-piso",
@@ -1785,7 +2042,33 @@ var APP_DATA = {
           "target": "39-sala-pequea"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -1.774798064610156, 
+          pitch: 0.4054275087771302,
+          "title": "Gestión Escolar",
+          "tag": "Educación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Gestión escolar es un espacio de apoyo fundamental para el desarrollo de las actividades académicas y la atención a la comunidad del Centro. En esta área se brinda seguimiento a diversos procesos académicos y administrativos que contribuyen a la trayectoria de los estudiantes. Además, cuenta con espacios destinados a la formación y el aprendizaje, como el Aula Multimedia y aulas para actividades académicas, así como con el consultorio médico y un área multifuncional donde se realizan eventos institucionales, académicos y de integración para la comunidad. Este espacio contribuye al adecuado funcionamiento de las actividades del Centro y al fortalecimiento de los servicios que se ofrecen a estudiantes, docentes y personal administrativo."
+            }
+          ]
+        },
+        {
+          yaw: -0.6450785110280499, 
+          pitch: -0.0023351472282389096,
+          "title": "Consultorio Médico",
+          "tag": "Salud",
+          "image" : "img/areasCICATA/24.- Consultorio Médico.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Consultorio Médico es un espacio destinado a la atención primaria y al cuidado de la salud de la comunidad del CICATA Unidad Morelos. Su función principal es brindar apoyo en situaciones que requieren valoración médica inicial, orientación en temas de salud y atención oportuna ante eventualidades que puedan presentarse durante el desarrollo de las actividades académicas, administrativas y de investigación."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "37-laboratorio-de-computo",
@@ -1823,7 +2106,21 @@ var APP_DATA = {
           "target": "36-salas-vacias-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -0.8446392976481611, 
+          pitch: 0.3425183772733842,
+          "title": "Sala de Computadoras",
+          "tag": "Educación",
+          "image" : "img/areasCICATA/22.- Sala de Computadoras.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La Sala de Computadoras es un espacio equipado con herramientas tecnológicas y equipos de cómputo que apoyan el desarrollo de actividades académicas, administrativas y de investigación. Este espacio permite a estudiantes, docentes e investigadores realizar trabajos, análisis de información, presentaciones y actividades relacionadas con el uso de software especializado y recursos digitales."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "38-sala-grande",
@@ -1861,7 +2158,21 @@ var APP_DATA = {
           "target": "36-salas-vacias-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -0.8446392976481611, 
+          pitch: 0.3425183772733842,
+          "title": "Sala de Usos Múltiple",
+          "tag": "Educación",
+          "image": "img/areasCICATA/23.- Sala de Usos Múltiple.webp",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "La Sala de Usos Múltiples es un espacio diseñado para el desarrollo de diversas actividades de investigación, académicas y de vinculación. Por su amplitud y versatilidad, permite la realización del Simposio de vacunas y bioterapéuticos, conferencias, talleres, cursos, encuentros académicos y eventos institucionales que fomentan la generación y difusión del conocimiento."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "39-sala-pequea",
@@ -1899,7 +2210,20 @@ var APP_DATA = {
           "target": "36-salas-vacias-segundo-piso"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -0.8446392976481611, 
+          pitch: 0.3425183772733842,
+          "title": "Aula 3",
+          "tag": "Educación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Aula 3 es un espacio de uso múltiple que se adapta a distintas necesidades académicas y de colaboración. Puede ser utilizada para clases, reuniones, talleres, capacitaciones y actividades grupales, ofreciendo un entorno flexible que favorece el trabajo interdisciplinario y la interacción entre la comunidad académica y científica."
+            }
+          ]
+        },
+      ]
     }
   ],
   "name": "Recorrido-Virtual-CICATA",

@@ -60,7 +60,7 @@
   position: relative;
   width: 100%;
   max-width: 1250px;
-  max-height: 90vh;
+  max-height: 60vh;
   background: #1e1e28;
   border-radius: clamp(10px, 1.5vw, 16px);
   overflow: hidden;
