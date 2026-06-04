@@ -4,7 +4,7 @@ const chatbotHTMLTemplate = `
         <div id="chatbot-trigger-container">
             <div class="help-bubble" id="help-bubble-text">¿Necesitas ayuda?</div>
             <button id="chatbot-toggle-btn" class="mascot-button">
-                <img src="img/burro-blanco.png" alt="Mascota IPN" class="mascot-icon">
+                <img src="img/policarpio.png" alt="Mascota IPN" class="mascot-icon">
             </button>
         </div>
 
@@ -12,7 +12,7 @@ const chatbotHTMLTemplate = `
         <div id="chatbot-sidebar" class="sidebar-hidden">
             <div class="sidebar-header">
                 <div class="header-info">
-                    <span style="font-weight: bold; color: white;">CICATA bot</span>
+                    <span style="font-weight: bold; color: white;">Policarpio</span>
                 </div>
                 <div class="header-icons">
                     <span class="header-icon" id="sidebar-close-btn" style="cursor: pointer; font-size: 1.2rem;">✕</span>
