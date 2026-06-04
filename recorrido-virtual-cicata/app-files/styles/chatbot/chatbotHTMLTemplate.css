@@ -60,9 +60,10 @@
     box-shadow: 0 4px 10px rgba(140, 0, 70, 0.15);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 }
 
 .mascot-button:hover {
@@ -75,9 +76,13 @@
 
 
 .mascot-icon {
-    width: 170%; /*100 max*/
-    height: 170%;
+    width: 190%;
+    height: 190%;
     object-fit: contain;
-    border-radius: 50%;
+    position: absolute;
+    bottom: -15px; /* Bajamos un poco más para que el torso cubra la base del círculo */
+    left: 58%;    /* Mantenemos el centrado óptico del torso */
+    transform: translateX(-50%);
+    pointer-events: none;
     /* No transforms or mix-blend-mode to preserve maximum crispness */
 }
