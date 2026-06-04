@@ -43,69 +43,7 @@ var APP_DATA = {
         }
       ],
       "mediaHotspots": [
-        {
-          "yaw": -2.5339730574711709,
-          "pitch": 0.16778635584351953,
-          "title": "Hotspot de información",
-          "tag": "Equipo de laboratorio",
-          "sections": [
-            {
-              "subtitle": "Función principal:",
-              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
-            },
-            {
-              "subtitle": "Componente clave:",
-              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
-            },
-            {
-              "subtitle": "Uso común:",
-              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
-            }
-          ]
-        },
-        {
-          "yaw": -1.04339730574711709,
-          "pitch": 0.16778635584351953,
-          "title": "Hotspot de Imagen",
-          "tag": "Equipo de laboratorio",
-          "image": "img/ImagenDePrueba.jpg",
-          "sections": [
-            {
-              "subtitle": "Función principal:",
-              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
-            },
-            {
-              "subtitle": "Componente clave:",
-              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
-            },
-            {
-              "subtitle": "Uso común:",
-              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
-            }
-          ]
-        },
-        {
-          "yaw": -2.0,
-          "pitch": 0,
-          "title":    "Balanza analítica",
-          "tag":      "Equipo de laboratorio",
-          "video": "./videos/ConoceNuestraOferta.mp4",
-          "sections": [
-            {
-              "subtitle": "Función principal:",
-              "body": "Instrumento de alta precisión diseñado para la determinación de masas extremadamente pequeñas, con una legibilidad de hasta 0.1 mg (0.0001 g)."
-            },
-            {
-              "subtitle": "Componente clave:",
-              "body": "Cuenta con una cámara de pesaje (guardabrisas) acristalada para aislar el plato de medición de corrientes de aire, cambios térmicos y polvo, factores que alterarían las lecturas debido a su alta sensibilidad."
-            },
-            {
-              "subtitle": "Uso común:",
-              "body": "Ideal para la preparación de soluciones exactas, estándares analíticos y dosificación rigurosa de reactivos purificados o bioterapéuticos."
-            }
-          ],
-          "link": ""
-        }
+        
       ]
     },
     {
@@ -677,7 +615,92 @@ var APP_DATA = {
           "target": "19-pasillo-laboratorios-3"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          "yaw": 0.8917419215550062, 
+          "pitch": 0.1320556493301357,
+          "title": "Termociclador tiempo real marca Thermo Fisher Scientific (applied biosystems)",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/10.1 Termociclador tiempo real_.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para realizar PCR en tiempo real (qPCR), permitiendo la amplificación y detección simultánea de ADN o ARN en tiempo real."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema óptico de fluorescencia de alta sensibilidad y tecnología Fast PCR que reduce significativamente los tiempos de corrida."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en diagnóstico molecular, análisis de expresión génica, cuantificación de ácidos nucleicos y detección de patógenos en laboratorios clínicos y de investigación."
+            }
+          ]
+        },
+        {
+          yaw: 0.07811019839374822, 
+          pitch: 0.19750675812122154,
+          "title": "Termociclador punto final Marca Axygen",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/10.2.-Termocicladorpuntofinal.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para realizar reacciones de PCR (Reacción en Cadena de la Polimerasa) mediante ciclos controlados de temperatura para amplificar material genético."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con un bloque térmico de alta precisión y programación rápida de protocolos de amplificación."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea en experimentos de biología molecular, genética, diagnóstico e investigación para amplificación y análisis de ADN y/o ARN."
+            }
+          ]
+        },
+        {
+          yaw: -0.1346127651381437, 
+          pitch: 0.1796694598999391,
+          "title": "Termociclador punto final Marca BioRad",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/10.3.-Termocicladorpuntofinal.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para realizar reacciones de PCR (Reacción en Cadena de la Polimerasa) mediante ciclos controlados de temperatura para amplificar material genético."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con un bloque térmico de alta precisión y programación rápida de protocolos de amplificación."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea en experimentos de biología molecular, genética, diagnóstico e investigación para amplificación y análisis de ADN y/o ARN."
+            }
+          ]
+        },
+        {
+          yaw: -2.4298590571103738, 
+          pitch: 0.10167359695774536,
+          "title": "Nanodrop marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/10.4.-Nanodrop.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para medir la concentración y pureza de ácidos nucleicos y proteínas mediante espectrofotometría UV-Vis."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Requiere volúmenes mínimos de muestra (1–2 µL) y cuenta con sistema de medición directa sin necesidad De celdas o cubetas."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea en pruebas de biología molecular, genética y bioquímica para cuantificación rápida de ADN, ARN y proteínas."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "21-cultivo-celular-y-microscopia",
@@ -721,13 +744,136 @@ var APP_DATA = {
           "target": "22-pasillo-laboratorios-4"
         }
       ],
-      "infoHotspots": [
+      "mediaHotspots": [
         {
-          "yaw": 1.63974169394751,
-          "pitch": 0.1472042051361413,
-          "title": "Title",
-          "text": "Text"
-        }
+          yaw: -0.17846533555522726, 
+          pitch: 0.23429732922500968,
+          "title": "Cultivo Celular y Microscopía",
+          "tag": "Habitación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Diseñado para el cultivo, manipulación y análisis de células en condiciones controladas. Permite llevar a cabo procedimientos tales como la producción de proteínas en modelos celulares, la evaluación del efecto terapéutico de diversas moléculas in vitro, la determinación de las características tales como la migración, proliferación, etc. Este espacio cuenta con equipos como centrífuga refrigerada y agitador orbital con incubadora. "
+            }
+          ]
+        },
+        {
+          yaw: 2.818487465850805, 
+          pitch: 0.17458203042592693,
+          "title": "Lector de placas marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/12.1.-Lectordeplacas.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para la lectura y análisis de microplacas mediante diferentes métodos de detección óptica en ensayos biológicos y químicos."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Integra sistema multimodo de detección con capacidades de absorbancia, fluorescencia y luminiscencia, además de control automatizado."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en diagnóstico para ensayos ELISA, cuantificación celular, análisis enzimáticos y estudios de expresión molecular."
+            }
+          ]
+        },
+        {
+          yaw: 1.5693647533830193, 
+          pitch: 0.068419439709551,
+          "title": "Cuarto anexo a cultivo celular",
+          "tag": "Habitación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Este espacio cuenta con un área de incubación celular con acabados especializados, como piso de caucho y paredes con recubrimiento epóxico antibacterial, además de curva sanitaria, lo que permite cumplir con las normas de buenas prácticas de laboratorio. Aquí se dispone de una cabina de bioseguridad BSL-2, incubadoras de CO₂ y un microscopio invertido para el monitoreo del crecimiento celular."
+            }
+          ]
+        },
+        {
+          yaw: 2.044407965328217, 
+          pitch: 0.02650290889278395,
+          "title": "Campana de bioseguridad Clase II Tipo A2 marca LABCONCO",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/13.1.- Cuarto anexo.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para proporcionar protección al usuario, la muestra y el ambiente durante la manipulación de material biológico."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con flujo de aire laminar vertical y filtros HEPA de alta eficiencia que mantienen un ambiente de trabajo limpio y seguro."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en manipulación estéril de muestras biológicas."
+            }
+          ]
+        },
+        {
+          yaw: 1.9403686585730657, 
+          pitch: -0.03623068873415747,
+          "title": "Microscopio investido marca Carl Zeiss",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/13.2.-Microscopioinvestido.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Microscopio invertido diseñado para la observación de cultivos celulares y muestras biológicas."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema óptico de alta calidad y configuración invertida que facilita la visualización de células vivas en placas y frascos de cultivo."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para monitoreo de crecimiento celular, confluencia y morfología de células vivas."
+            }
+          ]
+        },
+        {
+          yaw: 1.5102187069022737, 
+          pitch: -0.02115913802255065,
+          "title": "Incubadora de CO2 marca TShermo cientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/13.3.-IncubadoradeCO2.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para mantener condiciones controladas de temperatura, humedad y concentración de CO₂ para el crecimiento y mantenimiento de cultivos celulares."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema de esterilización por calor, control preciso de CO₂ y temperatura, además de cámara interna de acero inoxidable para reducir el riesgo de contaminación de los medios de cultivo."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para incubación de células, tejidos y microorganismos sensibles."
+            }
+          ]
+        },
+        {
+          yaw: 1.3525564842355102, 
+          pitch: 0.07667761043608223,
+          "title": "Microscopio marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/13.5.-Microscopio.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Microscopio digital diseñado para la observación, captura y documentación de muestras biológicas en campo claro y campo oscuro."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con cámara digital integrada, pantalla táctil de alta resolución y sistema de iluminación LED ajustable para adquisición rápida de imágenes."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en la observación de cultivos celulares, tejidos y muestras biológicas."
+            }
+          ]
+        },
       ]
     },
     {
@@ -822,19 +968,82 @@ var APP_DATA = {
           "target": "22-pasillo-laboratorios-4"
         }
       ],
-      "infoHotspots": [
+      "mediaHotspots": [
         {
-          "yaw": 0.3690356310004326,
-          "pitch": 0.07162783340847412,
-          "title": "Title",
-          "text": "Text"
+          yaw: -0.8608338891432936, 
+          pitch: 0.6360365382306004,
+          "title": "Microbiología",
+          "tag": "Habitación",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "El Laboratorio de Microbiología está destinado al análisis, modificación y cultivo de microorganismos, con el objetivo de producir biomoléculas para el estudio de sus efectos terapéuticos y el desarrollo de vacunas. Cuenta con equipos como campana de flujo laminar, incubadora, agitador orbital, microcentrífugas refrigeradas y sistemas de refrigeración para el adecuado almacenamiento de muestras."
+            }
+          ]
         },
         {
-          "yaw": 1.4726927029182466,
-          "pitch": 0.1297626244104393,
-          "title": "Title",
-          "text": "Text"
-        }
+          yaw: -2.183809862189122, 
+          pitch: 0.10532664602342834,
+          "title": "Campana de flujo laminar marca Lab-Tech",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/14.1.-Campanadeflujolaminar.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para proporcionar un ambiente de trabajo limpio y libre de partículas durante la manipulación de muestras sensibles."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con flujo de aire laminar horizontal y filtros HEPA de alta eficiencia que minimizan el riesgo de contaminación de las muestras."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en la preparación de medios para procedimientos que requieren condiciones estériles."
+            }
+          ]
+        },
+        {
+          yaw: -1.3507484538545889, 
+          pitch: 0.05474544038763085,
+          "title": "Agitador orbital con incubación marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/14.2.-Agitadororbitalconincubación.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para incubar y agitar muestras simultáneamente bajo condiciones controladas de temperatura y movimiento orbital."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Integra sistema de agitación orbital de velocidad ajustable y control digital preciso de temperatura para mantener condiciones homogéneas de cultivo."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para el crecimiento de bacterias, levaduras y preparación de cultivos en medios líquidos."
+            }
+          ]
+        },
+        {
+          yaw: -0.5147036223846797, 
+          pitch: 0.0036854768779743807,
+          "title": "Incubadora marca Ecoshel",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/14.3.-Incubadora.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para mantener muestras biológicas y microbiológicas en condiciones controladas de temperatura durante procesos de incubación."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con control digital de temperatura y cámara de incubación con distribución uniforme de calor para asegurar estabilidad térmica."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea para la incubación de cultivos celulares, microorganismos y muestras biológicas."
+            }
+          ]
+        },
       ]
     },
     {
@@ -974,7 +1183,50 @@ var APP_DATA = {
           "target": "24-pasillo-laboratorios-5"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 0.8441552565477437, 
+          pitch: 0.11807807366217915,
+          "title": "Espectrofotómetro marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/16.1.-Espectrofotómetro.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para medir la absorbancia y transmitancia de muestras en las regiones ultravioleta y visible del espectro electromagnético."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema óptico de alta precisión y amplio rango espectral para análisis cuantitativos confiables de compuestos químicos y biológicos."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea en la cuantificación de sustancias, análisis de pureza y estudios cinéticos."
+            }
+          ]
+        },
+        {
+          yaw: 1.1078944551714134, 
+          pitch: 0.10829321050280427,
+          "title": "Fotodocumentador BioRad",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/16.2.-Fotodocumentador.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para capturar imágenes de geles de electroforesis (geles de acrilamida o de agarosa)."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con cámara digital de alta sensibilidad y sistema de iluminación UV/LED para detección y análisis de bandas de ADN, ARN y proteínas."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para documentación de resultados de electroforesis y análisis de ácidos nucleicos y proteínas."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "27-pasillo-laboratorios-6",
@@ -1068,7 +1320,29 @@ var APP_DATA = {
           "target": "27-pasillo-laboratorios-6"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: 0.5555040968347527, 
+          pitch: 0.024187236804149137,
+          "title": "Campana de extracción marca Lab-Tech",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/18.1.-Campanadeextracción.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para extraer y eliminar vapores y gases generadas durante procedimientos de laboratorio."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema de extracción de aire y gabinete de trabajo resistente a agentes químicos que ayuda a proteger al usuario y al ambiente del laboratorio."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para manipulación segura de reactivos volátiles, solventes y sustancias químicas."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "29-acondicionamiento-de-material",
@@ -1106,7 +1380,92 @@ var APP_DATA = {
           "target": "27-pasillo-laboratorios-6"
         }
       ],
-      "infoHotspots": []
+      "mediaHotspots": [
+        {
+          yaw: -2.5189156518849884, 
+          pitch: 0.17355939244038332,
+          "title": "Purificador de agua marca Thermo Scientific",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/19.1.- Purificador de Agua.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para producir agua purificada y ultrapura de uso en laboratorio mediante sistemas de prefiltración, filtración y purificación."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Integra tecnologías UV y ultrafiltración (UF) que eliminan contaminantes, microorganismos y compuestos orgánicos para obtener agua de alta calidad."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en la preparación de reactivos, cultivos y procedimientos analíticos sensibles."
+            }
+          ]
+        },
+        {
+          yaw: -1.9124477322524562, 
+          pitch: 0.13431693794366595,
+          "title": "Balanza analítica marca ADAM",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/19.2-Balanza analitica.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para medir masas con alta precisión en procedimientos analíticos y de laboratorio."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema de pesaje de alta sensibilidad, pantalla digital y cabina protectora que minimiza interferencias por corrientes de aire."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza en el pesaje para la preparación de reactivos, medios de cutivo y análisis cuantitativos precisos."
+            }
+          ]
+        },
+        {
+          yaw: 0.7345086885988792, 
+          pitch: 0.17197088575817787,
+          "title": "Horno de convección forzada marca YAMATO ",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/19.3.-Horno de convección forzada.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo diseñado para el calentamiento, secado y acondicionamiento de muestras mediante circulación uniforme de aire caliente."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con sistema de convección forzada que distribuye homogéneamente la temperatura en la cámara, además de control digital preciso."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se utiliza para el secado de material, esterilización en seco y pruebas térmicas de muestras."
+            }
+          ]
+        },
+        {
+          yaw: 1.4945127851276503, 
+          pitch: 0.45009222783581926,
+          "title": "Autoclave vertical marca EVAR",
+          "tag": "Equipo de laboratorio",
+          "image": "img/equipoLab/19.4.-Autoclave vertical.webp",
+          "sections": [
+            {
+              "subtitle": "Función principal:",
+              "body": "Equipo utilizado para esterilizar material, medios de cultivo mediante vapor a alta presión y temperatura."
+            },
+            {
+              "subtitle": "Componente o característica clave:",
+              "body": "Cuenta con cámara vertical de acero inoxidable, control de presión y temperatura para procesos de esterilización confiables."
+            },
+            {
+              "subtitle": "Uso común:",
+              "body": "Se emplea en la esterilización de instrumental, material y medios de cultivo."
+            }
+          ]
+        },
+      ]
     },
     {
       "id": "30-lobby-piso-2",
