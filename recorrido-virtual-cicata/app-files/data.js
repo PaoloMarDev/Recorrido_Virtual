@@ -2,7 +2,7 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "0-entrada-cicata",
-      "name": "Entrada-CICATA",
+      "name": "Entrada CICATA",
       "levels": [
         {
           "tileSize": 256,
@@ -97,7 +97,7 @@ var APP_DATA = {
     },
     {
       "id": "2-letras-cicata",
-      "name": "Letras CICATA",
+      "name": "Explanada",
       "levels": [
         {
           "tileSize": 256,
@@ -154,7 +154,7 @@ var APP_DATA = {
     },
     {
       "id": "3-estacionamiento-exterior",
-      "name": "Estacionamiento-Exterior",
+      "name": "Estacionamiento Exterior",
       "levels": [
         {
           "tileSize": 256,
@@ -198,7 +198,7 @@ var APP_DATA = {
     },
     {
       "id": "4-estacionamiento-interior",
-      "name": "Estacionamiento-Interior",
+      "name": "Semisótano",
       "levels": [
         {
           "tileSize": 256,
@@ -242,7 +242,7 @@ var APP_DATA = {
     },
     {
       "id": "13-lobby-piso-1",
-      "name": "Lobby-Piso-1",
+      "name": "Lobby Planta Baja",
       "levels": [
         {
           "tileSize": 256,
@@ -304,7 +304,7 @@ var APP_DATA = {
     },
     {
       "id": "14-oficinas-piso-1",
-      "name": "Oficinas-Piso-1",
+      "name": "Área administrativa",
       "levels": [
         {
           "tileSize": 256,
@@ -348,7 +348,7 @@ var APP_DATA = {
     },
     {
       "id": "15-mesa-reuniones",
-      "name": "Mesa-Reuniones",
+      "name": "Sala Circular I",
       "levels": [
         {
           "tileSize": 256,
@@ -386,7 +386,7 @@ var APP_DATA = {
     },
     {
       "id": "16-pasillo-entrada-laboratorios",
-      "name": "Pasillo-Entrada-Laboratorios",
+      "name": "Esclusa",
       "levels": [
         {
           "tileSize": 256,
@@ -430,7 +430,7 @@ var APP_DATA = {
     },
     {
       "id": "17-pasillo-laboratorios-1",
-      "name": "Pasillo-Laboratorios-1",
+      "name": "Pasillo 1",
       "levels": [
         {
           "tileSize": 256,
@@ -480,7 +480,7 @@ var APP_DATA = {
     },
     {
       "id": "18-pasillo-laboratorios-2",
-      "name": "Pasillo-Laboratorios-2",
+      "name": "Pasillo 2",
       "levels": [
         {
           "tileSize": 256,
@@ -524,7 +524,7 @@ var APP_DATA = {
     },
     {
       "id": "19-pasillo-laboratorios-3",
-      "name": "Pasillo-Laboratorios-3",
+      "name": "Pasillo 3",
       "levels": [
         {
           "tileSize": 256,
@@ -581,7 +581,7 @@ var APP_DATA = {
     },
     {
       "id": "20-biologa-molecular",
-      "name": "Biología-Molecular",
+      "name": "Biología Molecular",
       "levels": [
         {
           "tileSize": 256,
@@ -704,7 +704,7 @@ var APP_DATA = {
     },
     {
       "id": "21-cultivo-celular-y-microscopia",
-      "name": "Cultivo-Celular-y-Microscopia",
+      "name": "Cultivo Celular y Microscopía",
       "levels": [
         {
           "tileSize": 256,
@@ -878,7 +878,7 @@ var APP_DATA = {
     },
     {
       "id": "22-pasillo-laboratorios-4",
-      "name": "Pasillo-Laboratorios-4",
+      "name": "Pasillo 4",
       "levels": [
         {
           "tileSize": 256,
@@ -1048,7 +1048,7 @@ var APP_DATA = {
     },
     {
       "id": "24-pasillo-laboratorios-5",
-      "name": "Pasillo-Laboratorios-5",
+      "name": "Pasillo 5",
       "levels": [
         {
           "tileSize": 256,
@@ -1111,7 +1111,7 @@ var APP_DATA = {
     },
     {
       "id": "25-camara-fria",
-      "name": "Camara-Fria",
+      "name": "Cámara Fría",
       "levels": [
         {
           "tileSize": 256,
@@ -1230,7 +1230,7 @@ var APP_DATA = {
     },
     {
       "id": "27-pasillo-laboratorios-6",
-      "name": "Pasillo-Laboratorios-6",
+      "name": "Pasillo 6",
       "levels": [
         {
           "tileSize": 256,
@@ -1346,7 +1346,7 @@ var APP_DATA = {
     },
     {
       "id": "29-acondicionamiento-de-material",
-      "name": "Acondicionamiento-De-Material",
+      "name": "Acondicionamiento de Material",
       "levels": [
         {
           "tileSize": 256,
@@ -1469,7 +1469,7 @@ var APP_DATA = {
     },
     {
       "id": "30-lobby-piso-2",
-      "name": "Lobby-Piso-2",
+      "name": "Lobby Planta Alta",
       "levels": [
         {
           "tileSize": 256,
@@ -1519,7 +1519,7 @@ var APP_DATA = {
     },
     {
       "id": "31-oficinas-segundo-piso",
-      "name": "Oficinas-Segundo-Piso",
+      "name": "Subdirección Académica",
       "levels": [
         {
           "tileSize": 256,
@@ -1581,7 +1581,7 @@ var APP_DATA = {
     },
     {
       "id": "32-salon-clases-1",
-      "name": "Salon-Clases-1",
+      "name": "Aula I",
       "levels": [
         {
           "tileSize": 256,
@@ -1619,7 +1619,7 @@ var APP_DATA = {
     },
     {
       "id": "33-salon-clases-2",
-      "name": "Salon-Clases-2",
+      "name": "Aula II",
       "levels": [
         {
           "tileSize": 256,
@@ -1695,7 +1695,7 @@ var APP_DATA = {
     },
     {
       "id": "35-sala-reuniones-2",
-      "name": "Sala-Reuniones-2",
+      "name": "Sala Circular II",
       "levels": [
         {
           "tileSize": 256,
@@ -1733,7 +1733,7 @@ var APP_DATA = {
     },
     {
       "id": "36-salas-vacias-segundo-piso",
-      "name": "Salas-Vacias-Segundo-Piso",
+      "name": "Gestión Escolar",
       "levels": [
         {
           "tileSize": 256,
@@ -1789,7 +1789,7 @@ var APP_DATA = {
     },
     {
       "id": "37-laboratorio-de-computo",
-      "name": "Laboratorio-de-Computo",
+      "name": "Laboratorio de cómputo",
       "levels": [
         {
           "tileSize": 256,
@@ -1827,7 +1827,7 @@ var APP_DATA = {
     },
     {
       "id": "38-sala-grande",
-      "name": "Sala-Grande",
+      "name": "Sala de Usos Multiple",
       "levels": [
         {
           "tileSize": 256,
@@ -1865,7 +1865,7 @@ var APP_DATA = {
     },
     {
       "id": "39-sala-pequea",
-      "name": "Sala-Pequeña",
+      "name": "Aula III",
       "levels": [
         {
           "tileSize": 256,
