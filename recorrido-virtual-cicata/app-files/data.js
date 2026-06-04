@@ -596,7 +596,19 @@ var APP_DATA = {
               "body": "El área de bioinformática es un espacio multifuncional diseñado para facilitar el análisis de datos biológicos y la gestión de información. Equipado con un equipo de cómputo avanzado, este cubículo no solo permite llevar a cabo análisis complejos, sino que también se utiliza como un área de reuniones entre usuarios."
             },
           ]
-        }
+        },
+        {
+          yaw: 0.009764807949379062, 
+          pitch: 0.24338633441596258,
+          "title": "Unidad de procesamientos de muestras de tejidos",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Espacio especializado para la recepción, procesamiento, preservación y preparación de muestras biológicas de tejidos destinadas a estudios histológicos, celulares y moleculares. Esta unidad proporciona las condiciones necesarias para garantizar la calidad, integridad y trazabilidad de las muestras, contribuyendo al desarrollo de proyectos de investigación biomédica, así como a la formación de recursos humanos especializados en ciencias de la salud y biotecnología."
+            },
+          ]
+        },
       ]
     },
     {
@@ -729,6 +741,18 @@ var APP_DATA = {
             {
               "subtitle": "Descripción:",
               "body": "Es un espacio especializado equipado con las herramientas y tecnología necesarias para estudiar los ácidos nucleicos de los organismos, incluyendo ADN y ARN. Este laboratorio es fundamental en el Centro de Investigación, ya que permite realizar ensayos que ayuden a entender los procesos biológicos a nivel molecular, generar construcciones para la expresión de proteínas de interés, identificar mutaciones y secuencias específicas, etc. "
+            },
+          ]
+        },
+        {
+          yaw: -1.6126779541328684, 
+          pitch: 0.06416935079914765,
+          "title": "Diagnóstico Oncogenómico e Investigación Traslacional",
+          "tag": "Laboratorio",
+          "sections": [
+            {
+              "subtitle": "Descripción:",
+              "body": "Unidad especializada en el análisis de biomarcadores moleculares y genómicos asociados a enfermedades de relevancia para la salud humana, así como en el desarrollo y aplicación de herramientas para el diagnóstico y la investigación biomédica. Su objetivo es generar conocimiento científico con potencial de transferencia hacia aplicaciones clínicas y tecnológicas, promoviendo la vinculación entre la investigación básica, la investigación aplicada y las necesidades del sector salud. De esta manera, contribuye al desarrollo de estrategias innovadoras para el diagnóstico, pronóstico y tratamiento de enfermedades, favoreciendo una medicina de precisión orientada a mejorar la atención y calidad de vida de la población."
             },
           ]
         },
