@@ -12,7 +12,7 @@
 
 /* Nube "¿Necesitas ayuda?" */
 .help-bubble {
-  background: #b00058;
+  background: #6f1d46;
   color: white;
   padding: 10px 15px;
   border-radius: 8px; /* Estilo globo original de tu nueva imagen */
@@ -35,7 +35,7 @@
   left: 40px; /* Cola apuntando rectamente hacia el ícono del robot */
   border-width: 6px 6px 0;
   border-style: solid;
-  border-color: #b00058 transparent transparent transparent;
+  border-color: #6f1d46 transparent transparent transparent;
 }
 
 @keyframes floating {
@@ -56,7 +56,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 6px solid #b00058;
+  border: 6px solid #6f1d46;
   background: white;
   display: flex;
   justify-content: center;
