@@ -92,8 +92,8 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background-color: rgb(69, 15, 40);
-  background-color: rgba(69, 15, 40, 0.8);
+  background-color: rgb(111, 29, 70);
+  background-color: rgba(111, 29, 70, 0.8);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -116,8 +116,8 @@ body.multiple-scenes.mobile #titleBar {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(69, 15, 40);
-  background-color: rgba(171, 21, 111, 0.8);
+  background-color: rgb(111, 29, 70);
+  background-color: rgba(111, 29, 70, 0.8);
 }
 
 .mobile #fullscreenToggle {
@@ -166,8 +166,8 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(69, 15, 40);
-  background-color: rgba(171, 21, 111, 0.8);
+  background-color: rgb(111, 29, 70);
+  background-color: rgba(111, 29, 70, 0.8);
 }
 
 .mobile #autorotateToggle {
@@ -220,8 +220,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(69, 15, 40);
-  background-color: rgba(171, 21, 111, 0.8);
+  background-color: rgb(111, 29, 70);
+  background-color: rgba(111, 29, 70, 0.8);
   display: none; /* Deshabilitado a favor del Chatbot */
 }
 
@@ -372,13 +372,13 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   padding: 5px;
   
   /* Tus colores base (vino claro) */
-  background-color: rgb(69, 15, 40);
-  background-color: rgba(171, 21, 111, 0.8);
+  background-color: rgb(111, 29, 70);
+  background-color: rgba(111, 29, 70, 0.8);
 
   /* --- NUEVAS MEJORAS VISUALES --- */
   bottom: 20px; /* Los despega 20 pixeles del borde inferior */
   border-radius: 8px; /* Los hace perfectamente redondos */
-  box-shadow: 0 4px 8px rgba(69, 15, 40, 0.8);/* Añade una sombra elegante */
+  box-shadow: 0 4px 8px rgba(111, 29, 70, 0.8);/* Añade una sombra elegante */
   
   /* Hace que cualquier cambio (color o tamaño) tarde 0.3 segundos y sea suave */
   -webkit-transition: all 0.3s ease;
