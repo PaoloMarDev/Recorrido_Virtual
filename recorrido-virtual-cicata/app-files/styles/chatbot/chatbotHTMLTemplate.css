@@ -73,8 +73,6 @@
 .mascot-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(140, 0, 70, 0.25);
-  background-color: white;
-  border-color: #d10068;
 }
 
 .mascot-icon {
