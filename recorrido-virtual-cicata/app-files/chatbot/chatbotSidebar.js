@@ -33,10 +33,20 @@ const chatbotSidebar = {
                     this.sidebar.classList.remove("sidebar-hidden");
                     if (this.helpBubble) this.helpBubble.style.display = 'none';
                     this.startWelcomeFlow();
+                    
+                    // Bloquear interacción con los botones del minimapa (solo en móviles)
+                    if (window.innerWidth <= 600) {
+                        const floorMeter = document.getElementById('floor-meter');
+                        if (floorMeter) floorMeter.style.pointerEvents = 'none';
+                    }
                 }
                 else {
                     this.sidebar.classList.add("sidebar-hidden");
                     if (this.helpBubble) this.helpBubble.style.display = 'block';
+                    
+                    // Restaurar interacción con los botones del minimapa
+                    const floorMeter = document.getElementById('floor-meter');
+                    if (floorMeter) floorMeter.style.pointerEvents = 'auto';
                 }
                 if (e) e.stopPropagation();
             };
@@ -47,6 +57,11 @@ const chatbotSidebar = {
                 this.isSidebarOpen = false;
                 this.sidebar.classList.add("sidebar-hidden");
                 if (this.helpBubble) this.helpBubble.style.display = 'block';
+                
+                // Restaurar interacción con los botones del minimapa
+                const floorMeter = document.getElementById('floor-meter');
+                if (floorMeter) floorMeter.style.pointerEvents = 'auto';
+
                 if (e) e.stopPropagation();
             };
         }
@@ -66,6 +81,13 @@ const chatbotSidebar = {
                 this.closeBtn.click();
             }
         });
+
+        // Asegurar que al teletransportarse desde el chat también se restauren los eventos
+        const originalHandleHabitaciones = this.handleHabitaciones;
+        this.handleHabitaciones = function() {
+            originalHandleHabitaciones.apply(this, arguments);
+            // La lógica de restauración ya está dentro del action de cada escena
+        };
     },
 
     startWelcomeFlow() {
