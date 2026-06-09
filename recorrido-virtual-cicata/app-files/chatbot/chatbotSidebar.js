@@ -143,6 +143,13 @@ const chatbotSidebar = {
                     action: () => {
                         const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
                         if (nativo) nativo.click();
+
+                        // Cerrar sidebar en móvil tras teletransporte para ver la escena
+                        if (window.innerWidth <= 600) {
+                            this.isSidebarOpen = false;
+                            this.sidebar.classList.add("sidebar-hidden");
+                            if (this.helpBubble) this.helpBubble.style.display = 'block';
+                        }
                     }
                 };
 

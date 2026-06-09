@@ -22,10 +22,13 @@
   position: absolute;
   top: -55px;
   left: 15px; /* Algo escorada hacia adentro de la pantalla */
-  white-space: nowrap;
+  white-space: normal;
+  width: max-content;
+  max-width: 200px;
   animation: floating 2s ease-in-out infinite;
   text-align: center;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .help-bubble::after {
@@ -53,10 +56,10 @@
 /* Contenedor del Botón Mascota */
 .mascot-button {
   background-color: transparent;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  border: 6px solid #6f1d46;
+  border: 4px solid #6f1d46;
   background: white;
   display: flex;
   justify-content: center;
@@ -68,6 +71,19 @@
   box-sizing: border-box;
   overflow: visible;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .mascot-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .help-bubble {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    top: -45px;
+  }
 }
 
 .mascot-button:hover {
