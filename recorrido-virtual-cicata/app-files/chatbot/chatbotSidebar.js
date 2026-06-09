@@ -10,8 +10,24 @@ const chatbotSidebar = {
         this.chatMessages = document.getElementById("chat-messages");
         this.closeBtn = document.getElementById("sidebar-close-btn");
 
+        // Evitar que el clic dentro del sidebar cierre el minimapa por el listener del document
+        this.sidebar.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
         if (this.toggleBtn) {
-            this.toggleBtn.onclick = () => {
+            this.toggleBtn.onclick = (e) => {
+                // Solo en móviles: si el minimapa está abierto, cerrarlo y NO abrir el chatbot
+                if (window.innerWidth <= 600) {
+                    const minimap = document.getElementById('minimap-container');
+                    if (minimap && minimap.classList.contains('is-expanded')) {
+                        minimap.classList.remove('is-expanded');
+                        const minimapOverlay = document.getElementById('minimap-overlay');
+                        if (minimapOverlay) minimapOverlay.style.display = 'none';
+                        return; // No abrir el chatbot todavía
+                    }
+                }
+
                 this.isSidebarOpen = !this.isSidebarOpen;
                 if (this.isSidebarOpen) {
                     this.sidebar.classList.remove("sidebar-hidden");
@@ -22,16 +38,34 @@ const chatbotSidebar = {
                     this.sidebar.classList.add("sidebar-hidden");
                     if (this.helpBubble) this.helpBubble.style.display = 'block';
                 }
+                if (e) e.stopPropagation();
             };
         }
 
         if (this.closeBtn) {
-            this.closeBtn.onclick = () => {
+            this.closeBtn.onclick = (e) => {
                 this.isSidebarOpen = false;
                 this.sidebar.classList.add("sidebar-hidden");
                 if (this.helpBubble) this.helpBubble.style.display = 'block';
+                if (e) e.stopPropagation();
             };
         }
+
+        // Funcionalidad de cerrar al hacer clic fuera (solo en móviles)
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 600 && this.isSidebarOpen) {
+                if (!this.sidebar.contains(e.target) && !this.toggleBtn.contains(e.target)) {
+                    this.closeBtn.click();
+                }
+            }
+        });
+
+        // Soporte tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isSidebarOpen) {
+                this.closeBtn.click();
+            }
+        });
     },
 
     startWelcomeFlow() {
@@ -98,9 +132,11 @@ const chatbotSidebar = {
             const btn = document.createElement("button");
             btn.className = "option-button";
             btn.innerText = opt.text;
-            btn.onclick = () => {
+            btn.onclick = (e) => {
                 if (showUserMsg) this.addUserMessage(opt.text);
                 opt.action();
+                // Detener propagación para evitar que el click llegue al document y cierre el minimapa en PC
+                if (e) e.stopPropagation();
             };
             container.appendChild(btn);
         });
@@ -142,9 +178,16 @@ const chatbotSidebar = {
                     text: `🏢 ${scene.name}`,
                     action: () => {
                         const nativo = document.querySelector('#sceneList .scene[data-id="' + scene.id + '"]');
-                        if (nativo) nativo.click();
+                        if (nativo) {
+                            // Ejecutar clic sin que burbujee al document
+                            nativo.dispatchEvent(new MouseEvent('click', {
+                                bubbles: false,
+                                cancelable: true
+                            }));
+                        }
 
-                        // Cerrar sidebar en móvil tras teletransporte para ver la escena
+                        // Evitar que el cambio de habitación cierre otros menús en escritorio
+                        // Solo se cierra el sidebar en móvil tras teletransporte para ver la escena
                         if (window.innerWidth <= 600) {
                             this.isSidebarOpen = false;
                             this.sidebar.classList.add("sidebar-hidden");
