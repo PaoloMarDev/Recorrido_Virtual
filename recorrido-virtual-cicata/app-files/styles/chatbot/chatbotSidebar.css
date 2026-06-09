@@ -10,7 +10,7 @@
   background: #fdfdfd;
   display: flex;
   flex-direction: column;
-  z-index: 9980;
+  z-index: 9997;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border-radius: 18px;
   overflow: hidden;
